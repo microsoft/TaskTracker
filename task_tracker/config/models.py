@@ -1,6 +1,6 @@
 import os
 from typing import Dict, List
-from models.model import Model
+from task_tracker.models.model import Model
 
 os.environ["TRANSFORMERS_CACHE"] = "/disk1/"
 os.environ["HF_HOME"] = "/disk1/"

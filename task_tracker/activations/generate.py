@@ -1,20 +1,22 @@
 import torch
 import json
 
-from utils.model import load_model
-from config.models import models
-from utils.activations import process_texts_in_batches
+from task_tracker.utils.model import load_model
+from task_tracker.config.models import models
+from task_tracker.utils.activations import process_texts_in_batches
 
 # NOTE:
 # Update the model name to the model you want to generate activations for
 # Update with_priming to False if you want to generate activations without priming
-model_name = "mistral_7B"
+model_name: str = "mistral_7B"
 with_priming: bool = True
-
+cache_dir: str = (
+    "/disk1/"  # Update this to the cache directory where the model can be cached on your machine
+)
 model = models[model_name]
 
 try:
-    loaded_model = load_model(model.name)
+    loaded_model = load_model(model.name, cache_dir=cache_dir)
     tokenizer = loaded_model["tokenizer"]
     model = loaded_model["model"]
 
