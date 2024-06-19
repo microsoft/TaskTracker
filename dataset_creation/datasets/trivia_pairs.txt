@@ -1,0 +1,325 @@
+Question: What is the name of the tallest mountain in the world? Answer: Mount Everest
+Question: Which country has the largest population in the world? Answer: China 
+Question: What is the name of the longest river in Africa? Answer: The Nile River
+Question: What American city is the Golden Gate Bridge located in? Answer: San Francisco
+Question: What is the capital of Mexico? Answer: Mexico City
+Question: What is the name of the largest country in the world? Answer: Russia
+Question: What U.S. state is home to no documented poisonous snakes? Answer: Alaska
+Question: In which city is the Eiffel Tower located? Answer: Paris
+Question: What is the capital of Canada? Answer: Ottawa
+Question: What is the name of the largest ocean in the world? Answer: The Pacific Ocean
+Question: What present-day Italian city does Mt. Vesuvius overlook? Answer: Naples
+Question: What country are the Great Pyramids of Giza located in? Answer: Egypt
+Question: What is the capital of Thailand? Answer: Bangkok
+Question: What is the name of the smallest country in the world? Answer: The Vatican City
+Question: What is the capital of the American State of California? Answer: Sacramento
+Question: What country has the most natural lakes? Answer: Canada
+Question: How many States does the United States consist of? Answer: 50 
+Question: What planet is closest to Earth? Answer: Venus
+Question: What is the capital of Japan? Answer: Tokyo
+Question: Which African country is known as the "Rainbow Nation"? Answer: South Africa
+Question: What is the largest desert in the world? Answer: The Sahara Desert
+Question: Which European city is famous for its canals and gondolas? Answer: Venice, Italy
+Question: What is the capital of Australia? Answer: Canberra
+Question: Which river flows through the Grand Canyon in the United States? Answer: The Colorado River
+Question: What is the highest mountain range in Europe? Answer: The Alps
+Question: Which country is known as the "Land of the Rising Sun"? Answer: Japan
+Question: What is the name of the famous waterfall located on the border of Canada and the United States? Answer: Niagara Falls
+Question: Which continent is home to the Amazon Rainforest? Answer: South America
+Question: What is the name of the ancient city that was buried by volcanic ash in AD 79? Answer: Pompeii
+Question: Who wrote the play "Romeo and Juliet"? Answer: William Shakespeare
+Question: What is the name of the ship that carried the Pilgrims to America in 1620? Answer: The Mayflower
+Question: What year did the Berlin Wall fall? Answer: 1989
+Question: Who was Cleopatra having an affair with? Answer: Mark Antony
+Question: What was the name of the ancient Roman road that connected Rome to the southern parts of Italy? Answer: The Appian Way
+Question: Who was the first woman to fly solo across the Atlantic Ocean? Answer: Amelia Earhart
+Question: Which famous scientist developed the theory of relativity? Answer: Albert Einstein
+Question: What do the stripes on the American flag represent? Answer: The 13 original colonies
+Question: Where was Martin Luther King, Jr. born? Answer: Atlanta, Georgia
+Question: Which year was George H.W. Bush elected president? Answer: 1988
+Question: Who was the first woman to make a million dollars in the United States? Answer: Madam C.J. Walker
+Question: What was the name of the landmark Supreme Court case that ruled the racial segregation of schools unconstitutional? Answer: Brown v. Board of Education
+Question: What does DNA stand for? Answer: Deoxyribonucleic acid 
+Question: How many bones are in the human body? Answer: 206 
+Question: The concept of gravity was discovered by which famous physicist? Answer: Sir Isaac Newton 
+Question: What is the hardest natural substance on Earth? Answer: Diamond 
+Question: Which is the main gas that makes up the Earth's atmosphere? Answer: Nitrogen 
+Question: Humans and chimpanzees share roughly how much DNA? Answer: About 98% 
+Question: What is the most abundant gas in the Earth's atmosphere? Answer: Nitrogen 
+Question: Roughly how long does it take for the sun's light to reach Earth: 8 minutes, 8 hours, or 8 days? Answer: 8 minutes 
+Question: Which famous British physicist wrote "A Brief History of Time"? Answer: Stephen Hawking 
+Question: At what temperature are Celsius and Fahrenheit equal? Answer: -40 degrees 
+Question: The Astronomical Unit (AU) is a unit of measurement based on the average distance between what two bodies? Answer: Earth and the Sun 
+Question: What general name is also given to natural satellites? Answer: Moons 
+Question: Humans and chimpanzees share roughly how much DNA? Answer: About 98% 
+Question: What is the heaviest organ in the human body? Answer: The liver 
+Question: What is known as the "master gland" of the human body? Answer: The pituitary gland 
+Question: How much taller is the Eiffel Tower during the summer? Answer: About 6 inches (15 centimeters) due to thermal expansion 
+Question: What is the only planet that spins clockwise? Answer: Venus 
+Question: The Horsehead Nebula can be found in what constellation? Answer: Orion 
+Question: The world's fastest-growing plant is a species of what? Answer: Bamboo 
+Question: How often does Halley’s Comet appear in the sky? Answer: Approximately every 76 years 
+Question: What melted rock eventually becomes lava? Answer: Magma 
+Question: On what continent would you not find bees? Answer: Antarctica 
+Question: How many planets in our solar system have moons? Answer: All of them (Mercury and Venus have no moons) 
+Question: What animal is known for its black and white stripes? Answer: A zebra.
+Question: What do you call a baby cat? Answer: A kitten.
+Question: What is the name of the fairy tale character who slept for 100 years? Answer: Sleeping Beauty
+Question: What is the color of a ripe banana? Answer: Yellow
+Question: What do you call a group of fish? Answer: A school
+Question: What is the name of the boy who never grows up in Neverland? Answer: Peter Pan
+Question: What is the opposite of "day"? Answer: Night
+Question: What is the name of the planet we live on? Answer: Earth
+Question: What is the tallest animal in the world? Answer: A giraffe
+Question: What do you call the colored part of your eye? Answer: The iris
+Question: How many legs does a spider have? Answer: Eight
+Question: What is the name of the toy cowboy in Toy Story? Answer: Woody
+Question: What is the color of an emerald? Answer: Green
+Question: What is something you hit with a hammer? Answer: A nail
+Question: What’s the name of a place you go to see lots of animals? Answer: The zoo
+Question: Whose nose grew longer every time he lied? Answer: Pinocchio
+Question: What is the name of the fairy in Peter Pan? Answer: Tinkerbell
+Question: If you freeze water, what do you get? Answer: Ice
+Question: What colors are the stars on the American flag? Answer: White
+Question: In the nursery rhyme, Jack and Jill, what do Jack and Jill go up the hill to fetch? Answer: A pail of water
+Question: Which number means we have nothing? Answer: 0
+Question: What number follows 5? Answer: 6
+Question: Which number is greater: 4 or 6? Answer: 6
+Question: What is the largest number of these: 1, 14, 7, 11? Answer: 14
+Question: How much is 1 + 1? Answer: 2
+Question: How much is 5 - 2? Answer: 3
+Question: How much is 4 + 4? Answer: 8
+Question: How much do you need to add to 2 to get 5? Answer: 3
+Question: Which shape has three corners? Answer: Triangle
+Question: What shape is the TV? Answer: Rectangle
+Question: Which shape has more corners: a triangle or a square? Answer: Square
+Question: Name any ball-shaped object. Answer: Basketball, apple, orange
+Question: What animal wears a stone jacket? Answer: A tortoise
+Question: In what language was Don Quixote written? Answer: Spanish 
+Question: The hero Beowulf faces a monster known by what name? Answer: Grendel 
+Question: John Donne is associated with which literary school of poetry? Answer: Metaphysical 
+Question: During which century was John Milton’s Paradise Lost written? Answer: 17th century 
+Question: In which state do Mark Twain’s characters Tom Sawyer and Huckleberry Finn live? Answer: Missouri 
+Question: Sir Walter Scott wrote historical novels about which country? Answer: Scotland 
+Question: What color was Anna Karenina’s bag in Tolstoy’s novel Red? Answer: Red 
+Question: Which novel written by Oscar Wilde deals with immortality? Answer: The Picture of Dorian Gray 
+Question: What novel centers around marriage during the Victorian era, describing the fascination that a group of sisters have over one man? Answer: Pride and Prejudice 
+Question: Emily Brontë’s Wuthering Heights tells of a tragic romance between two lovers. What are their names? Answer: Catherine and Heathcliff 
+Question: Anastasia Steele first appears in which risqué 2011 novel by E.L. James? Answer: Fifty Shades of Grey 
+Question: What is the second Harry Potter book called? Answer: Harry Potter & The Chamber of Secrets 
+Question: In The Hobbit, what sort of creature is Smaug? Answer: A dragon 
+Question: Which Dickens character says "Please, Sir, I want some more"? Answer: Oliver Twist 
+Question: Which author created Tom Sawyer and Huckleberry Finn? Answer: Mark Twain 
+Question: Which Jules Verne character traveled around the world with Passepartout? Answer: Phileas Fogg 
+Question: To which kingdom of living things do the Triffids, who take over the Earth in a famous John Wyndham novel, belong? Answer: Plants 
+Question: In which 18th-century novel does the protagonist eventually marry Mr. Rochester? Answer: Jane Eyre 
+Question: Which prolific US author wrote It, The Shining, and Misery? Answer: Stephen King 
+Question: Who was Bertie Wooster’s valet in the series of P.G. Wodehouse stories? Answer: Jeeves 
+Question: Who directed The Godfather? Answer: Francis Ford Coppola
+Question: Who played the iconic role of Hannibal Lecter in The Silence of the Lambs? Answer: Anthony Hopkins
+Question: Which film features the famous line, "Here's looking at you, kid"? Answer: Casablanca.
+Question: Who directed the sci-fi classic Blade Runner? Answer: Ridley Scott
+Question: Who is the lead singer of Queen? Answer: Freddie Mercury
+Question: What singer has had a Billboard No. 1 hit in each of the last four decades? Answer: Mariah Carey 
+Question: Who was the very first American Idol winner? Answer: Kelly Clarkson
+Question: Which member of the Avengers had a brief stint as a pop star? Answer: Brie Larson
+Question: What pop star wrote songs for Ariana Grande, Miley Cyrus, Britney Spears, and Alice Cooper? Answer: Kesha 
+Question: Who wrote the novel 1984? Answer: George Orwell
+Question: Who authored the novel Pride and Prejudice? Answer: Jane Austen
+Question: Which legendary guitarist is known for playing a guitar named Lucille? Answer: B.B. King
+Question: Who sang the hit song Like a Rolling Stone? Answer: Bob Dylan
+Question: Which band released the album Abbey Road? Answer: The Beatles
+Question: Who played the iconic character Tony Montana in the movie Scarface? Answer: Al Pacino
+Question: Which film features the famous line, "May the Force be with you"? Answer: the Star Wars franchise
+Question: Who directed the fantasy film Pan's Labyrinth? Answer: Guillermo del Toro
+Question: Who is the first person to set foot on the moon? Answer: Neil Armstrong
+Question: Who is the first person to win the Nobel Prize in Physics? Answer: Wilhelm Röntgen 
+Question: Who is the first person to circumnavigate the globe? Answer: Ferdinand Magellan 
+Question: Who is the first person to invent the telephone? Answer: Alexander Graham Bell
+Question: What color is the sky on a clear day? Answer: blue
+Question: How many days are there in a week? Answer: seven 
+Question: Which planet is closest to the sun? Answer: Mercury
+Question: What do you call a baby cat? Answer: kitten
+Question: What is the opposite of "day"? Answer: night
+Question: What comes after the number 9? Answer: 10
+Question: Which fruit is often associated with the phrase " .... a day keeps the doctor away"? Answer: apple
+Question: What shape has three sides? Answer: triangle
+Question: What do you call a group of stars in the sky? Answer: constellation
+Question: Which animal is known for its long neck? Answer: giraffe
+Question: What do bees make? Answer: honey
+Question: What is the largest planet in our solar system? Answer: Jupiter
+Question: What do you call a female deer? Answer: a doe.
+Question: Which ocean is the largest? Answer: the Pacific Ocean
+Question: What is the main ingredient in bread? Answer: flour
+Question: What do you call a person who flies an airplane? Answer: pilot
+Question: What is the opposite of "hot"? Answer:cold
+Question: Which musical instrument has black and white keys? Answer: the piano
+Question: What do you call the frozen water that falls from the sky? Answer: snow
+Question: What word means the opposite of "good"? Answer: bad
+Question: What is the antonym of "fast"? Answer: slow
+Question: What word stands opposite to "happy"? Answer: sad
+Question: What is the opposite of "big"? Answer: small
+Question: What is the antonym of "love"? Answer: hate
+Question: What word pairs with "up" as its opposite? Answer: down
+Question: What stands opposite to "empty"? Answer: full
+Question: What is the antonym of "hard"? Answer: soft
+Question: Which word contrasts with "young"? Answer: old
+Question: What is the antonym of "beautiful"? Answer: ugly
+Question: What word pairs with "left" as its opposite? Answer: right
+Question: What stands opposite to "open"? Answer: closed
+Question: Which word contrasts with "inside"? Answer: outside
+Question: What word pairs with "begin" as its opposite? Answer: end
+Question: What stands opposite to "near"? Answer: far
+Question: What is the antonym of "heavy"? Answer: light
+Question: Tell me the name of the baby kangaroo Answer: joey
+Question: Remind me of the name of a female horse Answer: mare 
+Question: What is the name of the planet humans live on? Answer: earth
+Question: Please help me remember who wrote that famous play, The Tragedy of Hamlet Answer: Shakespeare
+Question: Do you remember what is the world's most famous tower located in Paris? Answer: Eiffel
+Question: Please remind me on what continent the United States is located in Answer: North America 
+Question: Please help me figure out what is the color associated with the clear sky? Answer: blue
+Question: How many days are there in a week? Answer: Seven
+Question: Name the animal known for having a long neck. Answer: Giraffe 
+Question: Do you know what the color of snow is? Answer: white 
+Question: Name the planet known as the 'Red Planet' Answer: Mars
+Question: What is the color of grass during summer? Answer: Green 
+Question: What do you call the first meal of the day? Answer: breakfast 
+Question: What do you call the tool that shows direction (North, South, East, West)? Answer: compass 
+Question: Calculate 2 plus 8 Answer: 10 
+Question: State the largest planet in our solar system. Answer: Jupiter
+Question: Name the main ingredients in bread. Answer: flour
+Question: Indicate from which direction the sun rises. Answer: east 
+Question: What is the second month of the year? Answer: February
+Question: Name the season that comes after autumn. Answer: winter 
+Question: Tell me what tool you use to clean your teeth. Answer: toothbrush
+Question: Name the place where you can borrow books. Answer: library 
+Question: Tell what a thermometer measures. Answer: temperature
+Question: Name the part of a tree that grows underground. Answer: root 
+Question: Mention the transparent material used to make windows. Answer: glass 
+Question: Identify what bees are known to produce. Answer: honey 
+Question: Describe the taste of sugar. Answer: sweet 
+Question: Name the organ that pumps blood. Answer: heart 
+Question: Mention the natural satellite of the Earth Answer: moon 
+Question: Mention the largest ocean on Earth. Answer: Pacific
+Question: State the color of an eggplant. Answer: purple 
+Question: State the color of a common crow. Answer: black 
+Question: Mention the largest land animal that lives in Africa. Answer: elephant 
+Question: Name the tool used to sweep floors. Answer: broom 
+Question: Which tool is used to drive nails into surfaces? Answer: hammer
+Question: Name the tool used for measuring distances. Answer: tape
+Question: Which tool is used to cut wood? Answer: saw
+Question: What tool is used to tighten or loosen bolts and nuts? Answer: wrench
+Question: What tool is used to fasten screws into surfaces? Answer: screwdriver 
+Question: Name the tool used for cutting paper or fabric in a straight line. Answer: Scissor
+Question: What tool is commonly used to measure angles? Answer: protractor
+Question: Specify the device used to control a TV. Answer: remote 
+Question: Tell me what a book is primarily made of. Answer: paper 
+Question: Describe the primary material of a candle. Answer: wax 
+Question: Name the largest animal in the ocean. Answer: whale 
+Question: Mention the planet closest to the Sun. Answer: Mercury
+Question: Specify the main diet of a herbivore. Answer: plants
+Question: Name the shape with four equal sides. Answer: square 
+Question: Indicate the sum of 10 and 5. Answer: 15 
+Question: State the period known for the reign of dinosaurs. Answer: Jurassic
+Question: State the empire ruled by Julius Caesar. Answer: Roman 
+Question: Specify the famous ship that sank in 1912 after hitting an iceberg. Answer: Titanic
+Question: Name the author of 'Harry Potter' series. Answer: Rowling
+Question: Specify the animated movie featuring a lion cub named Simba. Answer: The Lion King
+Question: Mention the movie where a girl falls down a rabbit hole into a fantasy world. Answer: Wonderland 
+Question: Indicate the bird known for its ability to repeat what you say. Answer: parrot 
+Question: State the animal with distinctive black and white stripes. Answer: zebra
+Question: Name the amphibian that can change its color to blend with the environment. Answer: chameleon
+Question: Mention the animal with a hard shell that carries its home on its back. Answer: turtle 
+Question: Mention the country known for the Eiffel Tower. Answer: France
+Question: Name the country famous for the Great Barrier Reef. Answer: Australia
+Question: Mention what rain comes from. Answer: clouds 
+Question: Name the animal that says 'meow' Answer: cat 
+Question: Name the fruit that grows on trees, is round and red, and has a stem. Answer: apple 
+Question: State what meal comes second in the day, after breakfast. Answer: lunch 
+Question: Name the color of a typical pumpkin. Answer: orange 
+Question: Mention what birds use to fly. Answer: wings 
+Question: State the opposite of up. Answer: down 
+Question: State the drink that comes from cows. Answer: milk 
+Question: Remind me the day that comes after 'Monday'? Answer: Tuesday 
+Question: Name the tool people use to eat soup. Answer: spoon 
+Question: State the name of the most common yellow fruit that monkeys also eat. Answer: banana
+Question: Remind me of a fruit that shares a name with a color. Answer: orange 
+Question: Tell me how many minutes are in a hour. Answer: 60 
+Question: Remind me of the planet with the most moons. Answer: Saturn
+Question: Tell me what a group of crows is called Answer: murder
+Question: Remind me what the largest bone in the human body is Answer: femur
+Question: Remind me what animals pearls are typically found in Answer: oyster
+Question: Remind me what animal is typically regarded as man's best friend. Answer: dog 
+Question: State the name of the home mountain of the Greek Gods. Answer: Olympus
+Question: Tell me what the fastest land animal in the world is. Answer: cheetah
+Question: Remind me how many days there are in a typical year Answer: 365 
+Question: Tell me what shape has 8 sides and is used for stop signs. Answer: octagon
+Question: Tell me the name of the Japanese city where the first atomic bomb was dropped Answer: Hiroshima
+Question: What is the animal, commonly found in China, that mainly eats bamboo? Answer: panda 
+Question: Question: What is the name for a young sheep? Answer: lamb
+Question: What is the largest mammal on Earth? Answer: blue whale
+Question: Which large cat species is native to the Americas and has a distinctive golden coat with black spots? Answer: jaguar
+Question: What is the name for a group of wolves? Answer: pack
+Question: I have 5 apples, and my friend has 6 apples. How many apples do we have together? Answer: 11
+Question: Translate 'hello' to Spanish. Answer: hola
+Question: Calculate 2 plus 8. Answer: 10 
+Question: Indicate the sum of 10 and 5 Answer: 15 
+Question: Translate 'dog' to German. Answer: Hund
+Question: What continent is Germany in? Answer: Europe 
+Question: Name one animal that is famous for eating bananas? Answer: Monkey 
+Question: What country is Anna frank house in? Answer: Netherlands
+Question: Who painted the starry night? Answer: Vincent van Gogh
+Question: Who painted the Mona Lisa? Answer: Leonardo da Vinci
+Question: What country is the Louvre Museum in? Answer: France
+Question: What country are the Pyramids in? Answer: Egypt 
+Question: When did WW2 end? Answer: 1945
+Question: What color is the typical ripe banana fruit? Answer: yellow 
+Question: How many legs do spiders have? Answer: 8 
+Question: What is the opposite of north? Answer: south 
+Question: What is the most famous yellow and white oval-shaped food people usually have for breakfast? Answer: Egg
+Question: What is the most famous desert people usually have for birthday celebrations and to put candles in? Answer: cake 
+Question: What is the name of a frozen dessert people usually have in summer? Answer: ice cream 
+Question: What is the italian version of ice creams? Answer: Gelato
+Question: What is a famous nut that is green? Answer: pistachio
+Question: What is the name of a glass surface that you can see yourself in? Answer: mirror 
+Question: What is the one main ingredient in guacamole? Answer: avocado
+Question: What is the most famous American movie about the Italian mafia? Answer: the godfather
+Question: Who was the first woman to win the Nobel prize? Answer: Marie Curie
+Question: What is the name of the famous watch in London? Answer: Big Ben
+Question: What is the name of the most famous river in Paris? Answer: Seine
+Question: What is the capital of Austria? Answer: Vienna 
+Question: What is the name of a baby lion? Answer: cub 
+Question: How many wheels does a car typically have? Answer: four 
+Question: What is the name of the season in year where flowers typically bloom? Answer: spring
+Question: What is the name of a land that is surrounded by water? Answer: island 
+Question: How many wheels does a bicycle have? Answer: two 
+Question: what season in year does it typically snow? Answer: winter
+Question: what is the name of the year season when it typically snows? Answer: winter
+Question: Who wrote crime and punishment? Answer: Fyodor Dostoyevsky
+Question: Who wrote Anna Karenina? Answer: Leo Tolstoy
+Question: what is the term that explains how plants process light to food? Answer: photosynthesis
+Question: What is the currency of Japan? Answer: Yen
+Question: What is the currency of Germany? Answer: Euro
+Question: Which continent is Japan in? Answer: Asia
+Question: What is the national animal of China? Answer: giant panda
+Question: What is the national animal of Canada? Answer: Beaver
+Question: What is the highest peak in Europe? Answer: Elbrus
+Question: What is the longest river in North America? Answer: Mississippi
+Question: Complete the following sequence: "Jan, Feb, Mar, ..." Answer: April 
+Question: Who is the scientist most associated with relativity? Answer: Einstein
+Question: Who is the scientist most associated with an apple? Answer: Newton
+Question: Who is the founder of Microsoft and one of the richest people in the world? Answer: Bill Gates
+Question: Who is the leader of the Indian independence movement and advocate of non-violence? Answer: Mahatma Gandhi
+Question: Who is the female pilot who attempted to fly solo across the Atlantic Ocean in 1937? Answer: Amelia Earhart
+Question: Who is the first president of the United States of America? Answer: George Washington
+Question: Who is the civil rights activist who delivered the "I Have a Dream" speech in 1963? Answer: Martin Luther King Jr.
+Question: Who is the Nobel Prize-winning physicist who discovered radioactivity? Answer: Marie Curie
+Question: Who is the queen of England who reigned for 64 years in the 19th century? Answer: Victoria 
+Question: Who is the ancient Greek philosopher who taught Plato and wrote about logic, ethics, and metaphysics? Answer: Aristotle
+Question: Who is the explorer who reached the South Pole in 1911? Answer: Roald Amundsen
+Question: Who is the painter of the Mona Lisa and The Last Supper? Answer: Leonardo da Vinci
+Question: Who is the main male character in the book "pride and prejudice"? Answer: Darcy
+Question: What is the name of the actor who played the godfather? Answer: Brando
+Question: What is the name of the object that circles around the earth? Answer: Moon
+Question: How many seconds in one minute? Answer: 60 
+Question: How many hours exist in a day? Answer: 24
