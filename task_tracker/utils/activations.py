@@ -1,15 +1,18 @@
 import os
 import torch
 from tqdm import tqdm
+import re
+import logging
 from datetime import datetime
 from transformers import AutoModel, AutoTokenizer
-
+from task_tracker.utils.data import format_prompts
+from task_tracker.models.model import Model
 current_dir = os.getcwd()
 parent_dir = os.path.dirname(current_dir)
 
 
 def get_last_token_activations_single(
-    text, model_name, model, tokenizer, start_layer: int = 1, token: int = -1
+    text, model, start_layer: int = 1, token: int = -1
 ):
     """
     Process a single text to extract the last token activations from all layers.
@@ -23,7 +26,8 @@ def get_last_token_activations_single(
     Returns:
     - Tensor of shape (num_layers, hidden_size) containing the last token activations.
     """
-    if "mistral" in model_name:
+    
+    if "mistral" in model.name:
         chat = [
             {
                 "role": "user",
@@ -40,14 +44,14 @@ def get_last_token_activations_single(
             {"role": "user", "content": text},
         ]
 
-    inputs = tokenizer.apply_chat_template(
+    inputs = model.tokenizer.apply_chat_template(
         chat, tokenize=True, add_generation_prompt=True, return_tensors="pt"
     )
 
     with torch.no_grad():
         try:
             inputs = inputs.cuda()
-            outputs = model(inputs, output_hidden_states=True)
+            outputs = model.model(inputs, output_hidden_states=True)
 
         except RuntimeError as e:
             if "CUDA out of memory" in str(e):
@@ -72,40 +76,38 @@ def get_last_token_activations_single(
 
 def process_texts_in_batches(
     dataset_subset,
-    model_name: str,
+    model: Model,
     data_type: str,
-    output_dir: str,
-    with_priming: bool = True,
     batch_size=1000,
-    save_output=True,
+    with_priming: bool = True,
 ):
     """
     Process texts in smaller batches and immediately write out each batch's activations.
     """
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    if not os.path.exists(model.output_dir):
+        os.makedirs(model.output_dir)
 
     for i in tqdm(range(0, len(dataset_subset), batch_size)):
 
         batch_primary, batch_primary_clean, batch_primary_poisoned, _, _ = (
-            format_prompts(dataset_subset[i : i + batch_size])
+            format_prompts(dataset_subset[i : i + batch_size], with_priming)
         )
 
         hidden_batch_primary = torch.stack(
             [
-                get_last_token_activations_single(text, model_name, model, tokenizer)
+                get_last_token_activations_single(text, model)
                 for text in batch_primary
             ]
         )
         hidden_batch_primary_clean = torch.stack(
             [
-                get_last_token_activations_single(text, model_name, model, tokenizer)
+                get_last_token_activations_single(text, model)
                 for text in batch_primary_clean
             ]
         )
         hidden_batch_primary_poisoned = torch.stack(
             [
-                get_last_token_activations_single(text, model_name, model, tokenizer)
+                get_last_token_activations_single(text, model)
                 for text in batch_primary_poisoned
             ]
         )
@@ -121,8 +123,15 @@ def process_texts_in_batches(
         # Construct file path for this batch
         time_str = datetime.now().strftime("%Y%m%d_%H%M%S")
         output_filepath = os.path.join(
-            output_dir, f"{data_type}_hidden_states_{i}_{i+batch_size}_{time_str}.pt"
+            model.output_dir, f"{data_type}_hidden_states_{i}_{i+batch_size}_{time_str}.pt"
         )
+        print(output_filepath)
+        sanitized_output_filepath = re.sub(r'[^\x00-\x7F]+', '_', output_filepath)
 
         # Save this batch's activations to disk
-        torch.save(hidden_batch, output_filepath)
+        try:
+            torch.save(hidden_batch, sanitized_output_filepath)
+            print(f"File saved successfully to {sanitized_output_filepath}")
+        except Exception as e:
+            logging.error(f"Failed to save file to {sanitized_output_filepath}: {e}")
+            print(f"An error occurred while saving the file: {e}")

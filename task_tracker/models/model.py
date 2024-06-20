@@ -1,5 +1,4 @@
-from typing import Dict
-
+from typing import Dict, Optional, Any
 
 class Model:
     """
@@ -14,9 +13,11 @@ class Model:
         start_layer (int, optional): The starting layer for the model. Defaults to 0.
         token (int, optional): The position of the token for extracting the activation value. Defaults to -1
         which represents the last token activation in the residual stream.
+        tokenizer (Optional[Any]): The tokenizer for the model. Defaults to None.
+        model (Optional[Any]): The model object. Defaults to None.
 
     Methods:
-        __init__(self, model_name: str, output_dir: str, data: Dict[str, str], subset: str, start_idx: int = 0, start_layer: int = 0, token: int = -1): Initializes the Model object.
+        __init__(self, name: str, output_dir: str, data: Dict[str, str], subset: str, start_idx: int = 0, start_layer: int = 0, token: int = -1, tokenizer: Optional[Any] = None, model: Optional[Any] = None): Initializes the Model object.
     """
 
     def __init__(
@@ -28,10 +29,15 @@ class Model:
         start_idx: int = 0,
         start_layer: int = 0,
         token: int = -1,
+        tokenizer: Optional[Any] = None,
+        model: Optional[Any] = None,
     ):
         self.name = name
         self.output_dir = output_dir
         self.token = token
         self.data = data
+        self.subset = subset
         self.start_idx = start_idx
         self.start_layer = start_layer
+        self.tokenizer = tokenizer
+        self.model = model

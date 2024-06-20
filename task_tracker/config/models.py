@@ -6,11 +6,10 @@ os.environ["TRANSFORMERS_CACHE"] = "/disk1/"
 os.environ["HF_HOME"] = "/disk1/"
 
 data = {
-    "train": "./dataset_sampling/dataset_sampled_examples/train_subset.json",
-    "val": "./dataset_sampling/dataset_sampled_examples/val_subset.json",
-    "test": "./dataset_sampling/dataset_sampled_examples/test_subset.json",
+    "train": "/share/projects/jailbreak-activations/dataset_sampling/dataset_sampled_examples/train_subset.json",
+    "val": "/share/projects/jailbreak-activations/dataset_sampling/dataset_sampled_examples/val_subset.json",
+    "test": "/share/projects/jailbreak-activations/dataset_sampling/dataset_sampled_examples/test_subset.json",
 }
-
 llama_3_70B = Model(
     name="meta-llama/Meta-Llama-3-70B",
     output_dir="/disk1/activations/llama_3_70B",
