@@ -1,5 +1,6 @@
 import torch
 import json
+import logging
 from task_tracker.utils.model import load_model
 from task_tracker.config.models import models, cache_dir
 from task_tracker.utils.activations import (
@@ -30,15 +31,15 @@ def main():
 
         # Check if multiple GPUs are available
         if torch.cuda.device_count() > 1:
-            print(f"Let's use {torch.cuda.device_count()} GPUs!")
+            logging.info(f"Let's use {torch.cuda.device_count()} GPUs!")
 
         model.model.eval()
 
     except Exception as err:
         # Print memory summary for each GPU in case of an error
         for i in range(torch.cuda.device_count()):
-            print(f"Memory summary for GPU {i}:")
-            print(torch.cuda.memory_summary(device=i))
+            logging.info(f"Memory summary for GPU {i}:")
+            logging.info(torch.cuda.memory_summary(device=i))
         raise err
 
     # Process data for activations
@@ -49,13 +50,12 @@ def main():
             # Determine directory and subset types based on data type
             if data_type == "train":
                 directory_name = "training"
-                subset_type = "train"
                 process_texts_in_batches(
                     dataset_subset=subset[model.start_idx :][
                         :1
                     ],  # TODO: remove this after testing
                     model=model,
-                    data_type=subset_type,
+                    data_type=data_type,
                     sub_dir_name=directory_name,
                     with_priming=with_priming,
                 )
@@ -73,9 +73,9 @@ def main():
                 )
 
         except json.JSONDecodeError as json_err:
-            print(f"Error decoding JSON for {data_type}: {json_err}")
+            logging.error(f"Error decoding JSON for {data_type}: {json_err}")
         except Exception as data_err:
-            print(f"Error processing {data_type} data: {data_err}")
+            logging.error(f"Error processing {data_type} data: {data_err}")
 
 
 if __name__ == "__main__":
