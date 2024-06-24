@@ -1,0 +1,1 @@
+{"activations": "/disk3/activations/llama_3_70B_Instruct/training", "activations_ood": "/disk3/activations/llama_3_70B_Instruct/validation", "ood_poisoned_file": "/share/projects/jailbreak-activations/dataset_sampling/dataset_sampled_test/dataset_out_poisoned_v1.json", "exp_name": "logistic_regression_llama3_70b_0", "machine": "asalem", "num_layers": 0}

@@ -1,0 +1,1 @@
+{"activations": "/disk1/activations/mistral_no_priming/training", "activations_ood": "/disk1/activations/mistral_no_priming/test", "ood_poisoned_file": "/share/projects/jailbreak-activations/dataset_sampling/dataset_sampled_test/dataset_out_poisoned_v1.json", "exp_name": "logistic_regression_mistral_no_priming_31", "machine": "uk-south-2", "num_layers": 31}
