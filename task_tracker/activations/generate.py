@@ -51,9 +51,7 @@ def main():
             if data_type == "train":
                 directory_name = "training"
                 process_texts_in_batches(
-                    dataset_subset=subset[model.start_idx :][
-                        :1
-                    ],  # TODO: remove this after testing
+                    dataset_subset=subset[model.start_idx :]
                     model=model,
                     data_type=data_type,
                     sub_dir_name=directory_name,
@@ -63,9 +61,7 @@ def main():
                 directory_name = "validation" if "val" in data_type else "test"
                 subset_type = "clean" if "clean" in data_type else "poisoned"
                 process_texts_in_batches_pairs(
-                    dataset_subset=subset[model.start_idx :][
-                        :1
-                    ],  # TODO: remove this after testing
+                    dataset_subset=subset[model.start_idx :]
                     model=model,
                     data_type=subset_type,
                     sub_dir_name=directory_name,
