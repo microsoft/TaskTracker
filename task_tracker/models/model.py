@@ -1,4 +1,6 @@
 from typing import Dict, Optional, Any
+import torch
+
 
 class Model:
     """
@@ -13,6 +15,7 @@ class Model:
         start_layer (int, optional): The starting layer for the model. Defaults to 0.
         token (int, optional): The position of the token for extracting the activation value. Defaults to -1
         which represents the last token activation in the residual stream.
+        torch_dtype (torch.dtype, optional): FP precision of loading the model. Defaults to torch.float32.
         tokenizer (Optional[Any]): The tokenizer for the model. Defaults to None.
         model (Optional[Any]): The model object. Defaults to None.
 
@@ -29,6 +32,7 @@ class Model:
         start_idx: int = 0,
         start_layer: int = 0,
         token: int = -1,
+        torch_dtype: torch.dtype = torch.float32,
         tokenizer: Optional[Any] = None,
         model: Optional[Any] = None,
     ):
@@ -39,5 +43,6 @@ class Model:
         self.subset = subset
         self.start_idx = start_idx
         self.start_layer = start_layer
+        self.torch_dtype = torch_dtype
         self.tokenizer = tokenizer
         self.model = model

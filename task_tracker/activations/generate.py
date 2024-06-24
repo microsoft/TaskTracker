@@ -1,44 +1,82 @@
 import torch
 import json
-
 from task_tracker.utils.model import load_model
-from task_tracker.config.models import models
-from task_tracker.utils.activations import process_texts_in_batches
-
-# NOTE:
-# Update the model name to the model you want to generate activations for
-# Update with_priming to False if you want to generate activations without priming
-model_name: str = "mistral_7B"
-with_priming: bool = True
-cache_dir: str = (
-    "/disk1/"  # Update this to the cache directory where the model can be cached on your machine
+from task_tracker.config.models import models, cache_dir
+from task_tracker.utils.activations import (
+    process_texts_in_batches,
+    process_texts_in_batches_pairs,
 )
-model = models[model_name]
 
-try:
-    loaded_model = load_model(model.name, cache_dir=cache_dir)
-    model.tokenizer = loaded_model["tokenizer"]
-    model.model = loaded_model["model"]
+# NOTE: Configuration
+# Update the model name to the model you want to generate activations for (from models in task_tracker.config.models)
+# Update with_priming to False if you want to generate activations without priming
+# Update paths in task_tracker.config.models of cache_dir (HF cache dir),
+# activation_parent_dir (the output of activations), and text_dataset_parent_dir (dir of dataset text files)
 
-    # Check if multiple GPUs are available
-    if torch.cuda.device_count() > 1:
-        print(f"Let's use {torch.cuda.device_count()} GPUs!")
+model_name: str = "mistral"
+with_priming: bool = True
 
-    model.model.eval()
 
-except Exception as err:
-    for i in range(torch.cuda.device_count()):
-        print(f"Memory summary for GPU {i}:")
-        print(torch.cuda.memory_summary(device=i))
-    raise err
+def main():
+    model = models[model_name]
 
-# Gathers activations for training, test and validation data. Filter by subset if you want to
-# get activations for a specific subset of the data (i.e., train, validation, or test).
-for subset, data in model.data.items():
-    subset = json.load(open(data, "r"))
-    process_texts_in_batches(
-        dataset_subset=subset[model.start_idx :][:1], # TODO: remove this after testing
-        model=model,
-        data_type=subset,
-        with_priming=with_priming,
-    )
+    try:
+        # Load the model and tokenizer
+        loaded_model = load_model(
+            model.name, cache_dir=cache_dir, torch_dtype=model.torch_dtype
+        )
+        model.tokenizer = loaded_model["tokenizer"]
+        model.model = loaded_model["model"]
+
+        # Check if multiple GPUs are available
+        if torch.cuda.device_count() > 1:
+            print(f"Let's use {torch.cuda.device_count()} GPUs!")
+
+        model.model.eval()
+
+    except Exception as err:
+        # Print memory summary for each GPU in case of an error
+        for i in range(torch.cuda.device_count()):
+            print(f"Memory summary for GPU {i}:")
+            print(torch.cuda.memory_summary(device=i))
+        raise err
+
+    # Process data for activations
+    for data_type, data in model.data.items():
+        try:
+            subset = json.load(open(data, "r"))
+
+            # Determine directory and subset types based on data type
+            if data_type == "train":
+                directory_name = "training"
+                subset_type = "train"
+                process_texts_in_batches(
+                    dataset_subset=subset[model.start_idx :][
+                        :1
+                    ],  # TODO: remove this after testing
+                    model=model,
+                    data_type=subset_type,
+                    sub_dir_name=directory_name,
+                    with_priming=with_priming,
+                )
+            else:
+                directory_name = "validation" if "val" in data_type else "test"
+                subset_type = "clean" if "clean" in data_type else "poisoned"
+                process_texts_in_batches_pairs(
+                    dataset_subset=subset[model.start_idx :][
+                        :1
+                    ],  # TODO: remove this after testing
+                    model=model,
+                    data_type=subset_type,
+                    sub_dir_name=directory_name,
+                    with_priming=with_priming,
+                )
+
+        except json.JSONDecodeError as json_err:
+            print(f"Error decoding JSON for {data_type}: {json_err}")
+        except Exception as data_err:
+            print(f"Error processing {data_type} data: {data_err}")
+
+
+if __name__ == "__main__":
+    main()

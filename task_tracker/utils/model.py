@@ -3,7 +3,7 @@ import os
 import torch
 
 
-def load_model(model_name: str, cache_dir: str):
+def load_model(model_name: str, cache_dir: str, torch_dtype: torch.dtype):
     config = AutoConfig.from_pretrained(model_name, use_cache=True)
     model = {
         "tokenizer": AutoTokenizer.from_pretrained(
@@ -14,7 +14,7 @@ def load_model(model_name: str, cache_dir: str):
             config=config,
             cache_dir=os.path.join(cache_dir, model_name),
             device_map="balanced_low_0",
-            torch_dtype=torch.bfloat16,
+            torch_dtype=torch_dtype,
         ),
     }
     return model
