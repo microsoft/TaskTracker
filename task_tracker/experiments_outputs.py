@@ -25,18 +25,18 @@ VERIFIER_RESPONSE_OUT_FILENAME_PER_MODEL = {
 ## Path to trained logistic regression models 
 LINEAR_PROBES_PATHS_PER_MODEL = {
     'mistral' : {
-         linear_probe_out_parent_dir +'/mlruns/0/599aacf342f2439ca3580f5a63907c68/artifacts/model': 0,
-         linear_probe_out_parent_dir + '/mlruns/0/c780daad0f324d0496fd63553553718f/artifacts/model': 15,
-         linear_probe_out_parent_dir + '/training/mistral/mistral_uksouth-2_layer_23_model.pickle': 23,
-         linear_probe_out_parent_dir + '/mlruns/0/eab2fe2e6cf24ff08f7e2b8788b77d59/artifacts/model': 31,
-         linear_probe_out_parent_dir + '/mlruns/0/f75afb2b80be4541b4f65ad1558ba023/artifacts/model': 7
+         linear_probe_out_parent_dir +'/mistral/0/model.pickle' : 0,
+         linear_probe_out_parent_dir + '/mistral/7/model.pickle' : 7,
+         linear_probe_out_parent_dir + '/mistral/15/model.pickle' : 15,
+         linear_probe_out_parent_dir + '/mistral/23/model.pickle' : 23,
+         linear_probe_out_parent_dir + '/mistral/31/model.pickle' : 31
     },
     'mixtral' : {
-        linear_probe_out_parent_dir + '/mixtral/mlruns/0/5dc3a3ae54184b8f824b77517d4495b5/artifacts/model': 7,
-        linear_probe_out_parent_dir + '/mixtral/mlruns/0/9e79a77d73ff4207b2a637125e532e9e/artifacts/model': 23,
-        linear_probe_out_parent_dir + '/mixtral/mlruns/0/8cae6f94286149569a008d1a6a73a5fb/artifacts/model': 15,
-        linear_probe_out_parent_dir + '/mixtral/mlruns/0/c122ca3e1cef404a8eef584400f4e17f/artifacts/model': 0,
-        linear_probe_out_parent_dir + '/mixtral/mlruns/0/79f8480830814cb18433e340845cf7b5/artifacts/model': 31
+        linear_probe_out_parent_dir + '/mixtral/0/model.pickle' : 0,
+        linear_probe_out_parent_dir + '/mixtral/7/model.pickle' : 7,
+        linear_probe_out_parent_dir + '/mixtral/15/model.pickle' : 15,
+        linear_probe_out_parent_dir + '/mixtral/23/model.pickle' : 23,
+        linear_probe_out_parent_dir + '/mixtral/31/model.pickle' : 31
     },
     
     'llama3_8b' : {

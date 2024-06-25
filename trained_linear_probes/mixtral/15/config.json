@@ -1,0 +1,1 @@
+{"activations": "/disk3/activations/mixtral_8x7B_instruct_float16/training", "activations_ood": "/disk3/activations/mixtral_8x7B_instruct_float16/validation/", "ood_poisoned_file": "/share/projects/jailbreak-activations/dataset_sampling/dataset_sampled_test/dataset_out_poisoned_v1.json", "exp_name": "logistic_regression_15", "machine": "uk-south-2", "num_layers": 15}
