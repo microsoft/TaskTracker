@@ -108,7 +108,8 @@ This repo contains:
     
 - To train metric learning (triplet) probes:
   - Specify the model required in `task_tracker/training/triplet_probe/train_per_layer.py` from the set of models in (`task_tracker/training/utils/constants.py`)
-  - Change output sub-directory of the experiment
+  - Change output sub-directory name of the experiment
+  - Change other hyperparams if required 
   - run `python train_per_layer.py`
   
 ### After training/downloading models 
@@ -131,7 +132,7 @@ This repo contains:
   - If required, we provide scripts to get the response of models to the attack prompts to simulate attacks.
     - run `task_tracker/evaluation/verifier/get_model_responses.py` to get models' responses. Change the model if required.
   - After getting responses:
-    - run the verifier via `task_tracker/evaluation/verifier/gpt4_judge_parallel_calls.py`. Change the model and paths if required.
+    - run the verifier via `task_tracker/evaluation/verifier/gpt4_judge_parallel_calls.py`. Change the model and paths if required. **Important:** this script parallelize the calls to the API. Watch out for the cost before proceeding with large datasets.
     - You will need Azure OpenAI credentials.
   - The results of responses and verifier of our experiments are provided in this repo under `task_tracker/dataset_creation/dataset_sampled`      
 - **Linear** probe:
