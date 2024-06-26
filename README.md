@@ -14,7 +14,7 @@ This repo contains:
 - Code for **training probes**
     - Linear probes
     - Metric learning probes
-  - Code for reproducing the **results and experiments** in the paper:
+- Code for reproducing the **results and experiments** in the paper:
     - ROC AUC of probes on test set
     - Metric learning probes distances per different conditions in the test set
     - Metric learning probes temporal distances per tokens in the poisoned sequences
@@ -133,12 +133,16 @@ This repo contains:
   - After getting responses:
     - run the verifier via `task_tracker/evaluation/verifier/gpt4_judge_parallel_calls.py`. Change the model and paths if required.
     - You will need Azure OpenAI credentials.
-  - The results of responses and verifier of our experiments are in **TODO**       
+  - The results of responses and verifier of our experiments are provided in this repo under `task_tracker/dataset_creation/dataset_sampled`      
 - **Linear** probe:
   - `task_tracker/evaluation/linear_probe/evaluate_linear_models.ipynb` runs the linear probes on test data. Change the model if required.
 - **Triplet** probe:
   - Prediction on test data:   
-    - `task_tracker/evaluation/triplet_probe/evaluate_triplet_models_test_data.ipynb` runs the triplet probe for the test data. Change the model if required. This will save the embeddings of examples in the model output dirs
+    - `task_tracker/evaluation/triplet_probe/evaluate_triplet_models_test_data.ipynb` runs the triplet probe for the test data. Change the model if required. This will save the embeddings of examples in the model output dirs. **Next**, update the saved embeddings paths in `task_tracker/experiments_outputs.py`
+  - Distances per conditions:
+      - `task_tracker/evaluation/triplet_probe/distances_per_conditions.ipynb` loads the saved embeddings generated in the previous step and calculates distances per different conditions in the dataset. Also, it uses the output of the verifier.
+  - Distances per tokens:
+    - `task_tracker/evaluation/triplet_probe/temporal_distances_per_tokens.ipynb` loads the test data text files and computes distances for a subset of examples per tokens to track distances before and after injections. Change the model if required     
     
 ----
   
