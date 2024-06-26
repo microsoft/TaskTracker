@@ -119,12 +119,12 @@ This repo contains:
 ## Evaluation 
 - Scripts to evaluate models and reproduce our experiments 
 
-## Dependencies 
+### Dependencies 
 - Evaluation scripts need:
   - The dataset text files specified in `task_tracker/config/models.py` (in dataset creation step)
   - The activations files lists (`DATA_LISTS`) in `task_tracker/training/utils/constants.py` (in the activations step)
   - The paths of trained models in `task_tracker/experiments_outputs.py` (in the training step)
-## How to
+### How to
 - **visualize** activations:
   - `task_tracker/evaluation/visualizations/tsne_raw_activations.ipynb` contains the script to visualize the task activations residual for raw activations. Change the model if required.
     
