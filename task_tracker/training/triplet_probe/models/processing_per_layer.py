@@ -58,50 +58,9 @@ class BaseLinearProcessingModel(nn.Module):
         # Normalize the output embeddings
         return F.normalize(x, p=2, dim=-1)
 
-class ParallelLinearProcessingModel(BaseLinearProcessingModel):
-    def _create_fc_sequence(self):
-        # Creating a sequence of fully connected layers for each layer's activations
-        fc_sequence = nn.Sequential(
-            nn.Linear(4096, 2048),
-            nn.ReLU(),
-            self.dropout,
-            nn.Linear(2048, 1024),
-            nn.ReLU(),
-            self.dropout,
-            nn.Linear(1024, 512),
-            nn.ReLU(),
-            self.dropout,
-            nn.Linear(512, 256),
-            nn.ReLU(),
-            self.dropout
-        )
-        return fc_sequence
-    
-class ParallelLinearProcessingModelWithLayerNorm(BaseLinearProcessingModel):
-    def _create_fc_sequence(self):
-        # Creating a sequence of fully connected layers for each layer's 
-        # activations with Layer Normalization
-        fc_sequence = nn.Sequential(
-            nn.Linear(4096, 2048),
-            nn.LayerNorm(2048),
-            nn.ReLU(),
-            self.dropout,
-            nn.Linear(2048, 1024),
-            nn.LayerNorm(1024),
-            nn.ReLU(),
-            self.dropout,
-            nn.Linear(1024, 512),
-            nn.LayerNorm(512),
-            nn.ReLU(),
-            self.dropout,
-            nn.Linear(512, 256),
-            nn.LayerNorm(256),
-            nn.ReLU(),
-            self.dropout
-        )
-        return fc_sequence
 
-class ParallelLinearProcessingModelCompact(BaseLinearProcessingModel):
+class ParallelLinearProcessingModel(BaseLinearProcessingModel):
+    #Creates a FC model per layer
     def _create_fc_sequence(self):
         # Creating a sequence of fully connected layers for each layer's activations
         fc_sequence = nn.Sequential(
@@ -113,18 +72,10 @@ class ParallelLinearProcessingModelCompact(BaseLinearProcessingModel):
             self.dropout
         )
         return fc_sequence
-
-class ParallelLinearProcessingModelCompactV2(BaseLinearProcessingModel):
-    def _create_fc_sequence(self):
-        # Creating a sequence of fully connected layers for each layer's activations
-        fc_sequence = nn.Sequential(
-            nn.Linear(4096, 200),
-            nn.ReLU(),
-            self.dropout
-        )
-        return fc_sequence    
+  
 
 class ParallelConvProcessingModel(BaseLinearProcessingModel):
+    #Creates a 1d conv model per layer
     def _create_fc_sequence(self):
         # Creating a sequence of fully connected layers for each layer's activations
         fc_sequence = nn.Sequential(
@@ -154,40 +105,4 @@ class ParallelConvProcessingModel(BaseLinearProcessingModel):
             self.dropout,
             nn.Flatten()
         )
-        return fc_sequence
-
-
-
-class ParallelConvProcessingModelWide(BaseLinearProcessingModel):
-    def _create_fc_sequence(self):
-        # Creating a sequence of fully connected layers for each layer's activations
-        
-        fc_sequence = nn.Sequential(
-            nn.Conv1d(1, 7, kernel_size=70, stride=1),
-            nn.ReLU(),          
-            nn.MaxPool1d(kernel_size=5),
-            self.dropout,  
-
-            nn.Conv1d(7, 10, kernel_size=50, stride=1),
-            nn.ReLU(),  
-            nn.MaxPool1d(kernel_size=3),
-            self.dropout,  
-
-            nn.Conv1d(10, 15, kernel_size=30, stride=1),
-            nn.ReLU(),  
-            nn.MaxPool1d(kernel_size=3),
-            self.dropout, 
-
-            nn.Conv1d(15, 20, kernel_size=20, stride=1),
-            nn.ReLU(), 
-            nn.MaxPool1d(kernel_size=3),
-            self.dropout,
-
-            nn.Conv1d(20, 25, kernel_size=5, stride=1),
-            nn.ReLU(), 
-            nn.MaxPool1d(kernel_size=3),
-            self.dropout,
-            nn.Flatten()
-        )
-        
         return fc_sequence
