@@ -10,15 +10,15 @@ triplet_probe_out_parent_dir = "/share/projects/jailbreak-activations/output_dir
 
 MODELS_RESPONSE_OUT_FILENAME_PER_MODEL = {
     
-    'mistral': text_dataset_parent_dir + '/dataset_sampled_test/dataset_out_poisoned_test_mistral_response_test.json',
-    'mixtral': text_dataset_parent_dir + '/dataset_sampled_test/dataset_out_poisoned_test_mixtral_response.json',
-    'llama3_8b' : text_dataset_parent_dir + '/dataset_sampled_test/dataset_out_poisoned_test_llama3_8b_response.json'
+    'mistral': text_dataset_parent_dir + '/mistral_responses/dataset_out_poisoned_test_mistral_response.json.json',
+    'mixtral': text_dataset_parent_dir + '/mixtral_responses/dataset_out_poisoned_test_mixtral_response.json.json',
+    'llama3_8b' : text_dataset_parent_dir + '/llama3_8b_responses/dataset_out_poisoned_test_llama3_8b_response.json.json'
 }
 
 VERIFIER_RESPONSE_OUT_FILENAME_PER_MODEL = {
-    'mistral': text_dataset_parent_dir + '/dataset_sampled_test/mistral_responses/dataset_out_poisoned_v2_mistral_response_verifier_full_data_cleaned.json',
-    'mixtral': text_dataset_parent_dir + '/dataset_sampled_test/mixtral_responses/dataset_out_poisoned_v2_mixtral_response_verifier_full_data_cleaned.json',
-    'llama3_8b' : text_dataset_parent_dir + '/dataset_sampled_test/llama3_8b_responses/dataset_out_poisoned_v2_llama3_8b_response_verifier_full_data_cleaned.json'
+    'mistral': text_dataset_parent_dir + '/mistral_responses/dataset_out_poisoned_test_mistral_response_verifier.json',
+    'mixtral': text_dataset_parent_dir + '/mixtral_responses/dataset_out_poisoned_test_mixtral_response_verifier.json',
+    'llama3_8b' : text_dataset_parent_dir + '/llama3_8b_responses/dataset_out_poisoned_test_llama3_8b_response_verifier.json'
 }
 
 

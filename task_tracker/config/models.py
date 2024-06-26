@@ -12,7 +12,7 @@ os.environ["HF_HOME"] = cache_dir
 activation_parent_dir = "/disk1/activations"
 
 # update paths to where the dataset text files are stored 
-text_dataset_parent_dir = "/share/projects/jailbreak-activations/dataset_sampling/dataset_sampled_examples"
+text_dataset_parent_dir = "/share/projects/jailbreak-activations/dataset_sampling/dataset_sampled"
 
 data = {
     "train": text_dataset_parent_dir + "/train_subset.json",
