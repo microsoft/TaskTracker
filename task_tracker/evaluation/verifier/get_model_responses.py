@@ -7,7 +7,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, AutoConfig
 from transformers import AutoTokenizer, pipeline
 
 #change to path of output files (to be generated)
-from experiments_outputs import MODELS_RESPONSE_OUT_FILENAME_PER_MODEL
+from task_tracker.experiments_outputs import MODELS_RESPONSE_OUT_FILENAME_PER_MODEL
 
 #change to path of text files and cache dirs
 from task_tracker.config.models import data, models, cache_dir
@@ -24,10 +24,10 @@ END_IDX = -1 # -1 will save for everything
 MODEL = 'mistral' ##change this to something else when needed 
 
 ## nicknames of models to their HF model name
-MODEL_TO_HF_NAME = {'mistral': models['mistral']['name'],
-                    'mixtral': models['mixtral']['name'],
-                    'llama3_8b': models['llama3_8b']['name'],
-                    'llama3_70b': models['llama3_70b']['name']} 
+MODEL_TO_HF_NAME = {'mistral': models['mistral'].name,
+                    'mixtral': models['mixtral'].name,
+                    'llama3_8b': models['llama3_8b'].name,
+                    'llama3_70b': models['llama3_70b'].name} 
 
 MODEL_NAME = MODEL_TO_HF_NAME[MODEL]
 
