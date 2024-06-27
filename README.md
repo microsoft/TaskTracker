@@ -8,13 +8,13 @@ Authors: Sahar Abdelnabi* and Aideen Fay* (joint first-author), Giovanni Cherubi
 
 ## Content 
 This repo contains: 
-- **Dataset construction** code
-- Code for **collecting activations**
+- [**Dataset construction**](#dataset-construction)
+- [**Collecting activations**](#activation-generation)
     - Supported models at the moment are: Phi-3 3.8B, Mistral 7B, Llama-3 8B, Mixtral 8x7B, Llama-3 70B
-- Code for **training probes**
+- [**Training probes**](#training)
     - Linear probes
     - Metric learning probes
-- Code for reproducing the **results and experiments** in the paper:
+- Code for reproducing the [**Results and experiments**](#evaluation) in the paper:
     - ROC AUC of probes on test set
     - Metric learning probes distances per different conditions in the test set
     - Metric learning probes temporal distances per tokens in the poisoned sequences
