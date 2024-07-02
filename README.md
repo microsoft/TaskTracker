@@ -22,23 +22,21 @@ The repo includes:
 TaskTracker enables more secure use of LLMs in retrieval-augmented applications by catching unwanted deviations from user instructions. It also opens up new directions for LLM interpretability and control.
 
 ## Table of Content 
-- [**Request Access to Data**](#request-data)
-- [**Dataset construction**](#dataset-construction)
-- [**Collecting activations**](#activation-generation)
+- [Request Access to Data](#request-data)
+- [Environment Setup](#env-setup)
+- [Dataset construction](#dataset-construction)
+- [Activation Generation](#activation-generation)
     - Supported models at the moment are: Phi-3 3.8B, Mistral 7B, Llama-3 8B, Mixtral 8x7B, Llama-3 70B
-- [**Training probes**](#training)
-    - Linear probes
-    - Metric learning probes
-- Code for reproducing the [**Results and experiments**](#evaluation) in the paper:
+- [Training probes](#training)
+    - [Linear Probes](#linear-probes)
+    - [Metric Learning (Triplet) Probes](#metric-learning-probes)
+- Code for reproducing the [Results and experiments](#evaluation) in the paper:
     - ROC AUC of probes on test set
     - Metric learning probes distances per different conditions in the test set
     - Metric learning probes temporal distances per tokens in the poisoned sequences
     - t-SNE visualization of raw activations and learned embeddings
     - GPT-4 verifier (judge) for attack execution
-- **Trained probes**
-  - Linear probes
-  - Triplet probes 
-  
+- [Citation](#citation)
 ----
 
 ## Request access to LLM activations and training data
@@ -196,7 +194,7 @@ Ensure you have:
    MODEL_OUTPUT_DIR = '/path/to/output/directory'
 
 
-### Training Linear Probe
+### [Linear Probes]
 
 1. Edit `task_tracker/training/linear_probe/train_linear_model.py`:
 
@@ -211,7 +209,7 @@ MODEL = "llama3_70b"  # Choose from models in task_tracker.training.utils.consta
 python task_tracker/training/linear_probe/train_linear_model.py
 ```
 
-### Training Metric Learning (Triplet) Probes
+### Metric Learning Probes
 1. Edit `task_tracker/training/triplet_probe/train_per_layer.py`:
 
 ```python
