@@ -12,16 +12,15 @@ os.environ["HF_HOME"] = cache_dir
 activation_parent_dir = "/disk1/activations"
 
 # update paths to where the dataset text files are stored 
-text_dataset_parent_dir = "/share/projects/jailbreak-activations/dataset_sampling/"
+text_dataset_parent_dir = "/share/projects/jailbreak-activations/dataset_sampling/dataset_sampled"
 
 data = {
-    "train": text_dataset_parent_dir + "dataset_sampled_examples/train_subset.json",
-    "val_clean": text_dataset_parent_dir + "/dataset_sampled_test/dataset_out_clean.json",
-    "val_poisoned" : text_dataset_parent_dir + "/dataset_sampled_test/dataset_out_poisoned_v1.json",
-    "test_clean": text_dataset_parent_dir + "/dataset_sampled_test/dataset_out_clean_v2.json",
-    "test_poisoned": text_dataset_parent_dir + "/dataset_sampled_test/dataset_out_poisoned_v2.json",
+    "train": text_dataset_parent_dir + "/train_subset.json",
+    "val_clean": text_dataset_parent_dir + "/dataset_out_clean.json",
+    "val_poisoned" : text_dataset_parent_dir + "/dataset_out_poisoned_v1.json",
+    "test_clean": text_dataset_parent_dir + "/dataset_out_clean_v2.json",
+    "test_poisoned": text_dataset_parent_dir + "/dataset_out_poisoned_v2.json",
 }
-
 llama_3_70B = Model(
     name="meta-llama/Meta-Llama-3-70B",
     output_dir= activation_parent_dir + "/llama3_70b",
