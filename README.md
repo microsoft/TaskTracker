@@ -194,7 +194,7 @@ Ensure you have:
    MODEL_OUTPUT_DIR = '/path/to/output/directory'
 
 
-### [Linear Probes]
+### Linear Probes
 
 1. Edit `task_tracker/training/linear_probe/train_linear_model.py`:
 
