@@ -1,5 +1,6 @@
 from typing import Dict, Optional, Any
-import torch 
+import torch
+
 
 class Model:
     """
@@ -33,7 +34,7 @@ class Model:
         token: int = -1,
         torch_dtype: torch.dtype = torch.float32,
         tokenizer: Optional[Any] = None,
-        model: Optional[Any] = None
+        model: Optional[Any] = None,
     ):
         self.name = name
         self.output_dir = output_dir
@@ -45,7 +46,3 @@ class Model:
         self.torch_dtype = torch_dtype
         self.tokenizer = tokenizer
         self.model = model
-
-
-
-
