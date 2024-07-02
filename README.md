@@ -9,11 +9,11 @@ Authors: Sahar Abdelnabi* and Aideen Fay* (joint first-author), Giovanni Cherubi
 </p>
 
 
-
 ----
 
 ## Content 
 This repo contains: 
+- [**Request Access to Data**](#request-data)
 - [**Dataset construction**](#dataset-construction)
 - [**Collecting activations**](#activation-generation)
     - Supported models at the moment are: Phi-3 3.8B, Mistral 7B, Llama-3 8B, Mixtral 8x7B, Llama-3 70B
@@ -31,6 +31,9 @@ This repo contains:
   - Triplet probes 
   
 ----
+
+## Request access to LLM activations and training data
+To request access to the activation data we generated for simulating task drift, please fill out this [form](https://forms.microsoft.com/r/wXBfXQpuR2) and we will respond with a time-restricted download link.  
 
 ## Setup 
 
