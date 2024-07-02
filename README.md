@@ -54,7 +54,7 @@ conda activate tasktracker
 
 ```bash
 cd TaskTracker
-`pip install -e .
+pip install -e .
 ```
 
 ---
