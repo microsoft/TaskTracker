@@ -7,7 +7,7 @@ TaskTracker is a novel approach to detect task drift in large language models (L
  Key features:
 
 * Detects when an LLM deviates from a user's original instructions due to malicious prompts injected into external data sources
-* Works across multiple state-of-the-art LLMs including Mistral 7B, Llama-3 8B, Mixtral 8x7B, and Phi-3 3.8B
+* Works across multiple state-of-the-art LLMs including Mistral 7B, Llama-3 8B,Llama-3 70B, Mixtral 8x7B, and Phi-3 3.8B
 * Achieves over 0.99 ROC AUC on out-of-distribution test data spanning jailbreaks, malicious instructions, and unseen task domains
 * Does not require model fine-tuning or output generation, maximizing deployability and efficiency
 * Generalizes well to detect various types of task drift without being trained on specific attacks
