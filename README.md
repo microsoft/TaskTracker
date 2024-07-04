@@ -2,7 +2,7 @@
 TaskTracker is a novel approach to detect task drift in large language models (LLMs) by analyzing their internal activations. It is based on the research described in this paper [Are you still on track!? Catching LLM Task Drift with Activations](https://arxiv.org/abs/2406.00799). 
 
 <p align="center">
-<img src="https://github.com/microsoft/TaskTracker/blob/main/teaser.png" width="700">
+<img src="https://github.com/microsoft/TaskTracker/blob/main/assets/teaser.png" width="700">
 </p>
  Key features:
 
