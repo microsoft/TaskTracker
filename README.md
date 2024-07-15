@@ -14,10 +14,11 @@ TaskTracker is a novel approach to detect task drift in large language models (L
 
 The repo includes:
 
-* Form to request access to a large-scale dataset (500K+ examples) for training and evaluating task drift detection as well as the generated activations.
+* Steps to recreate our exact large-scale dataset (500K+ examples), and generate a new one, for training and evaluating task drift detection
+* Form to request access to the pre-computed activations
 * Code to extract and analyze LLM activations
 * Implementations of linear and metric learning probes for task drift classification
-*  Evaluation scripts and pre-trained models
+* Evaluation scripts and pre-trained models
 
 TaskTracker enables more secure use of LLMs in retrieval-augmented applications by catching unwanted deviations from user instructions. It also opens up new directions for LLM interpretability and control.
 
@@ -61,12 +62,15 @@ pip install -e .
 
 ## Dataset Construction
 
+
+
 We provide pre-sampled dataset examples for training and evaluation. To access them, please complete this [form](https://forms.microsoft.com/r/wXBfXQpuR2).
 
 ### Option 1: Using Pre-sampled Dataset
 
-1. After receiving access, download the dataset files.
-2. Update the dataset file paths in `task_tracker/config/models.py` to point to your downloaded files.
+1- We provide scripts to regenerate our dataset exactly (which you can verify with prompt hashes hashes)
+2- Please run the notebooks in `task_tracker/dataset_creation/recreate_dataset` which will automatically download the relevant resources and build the dataset. No change is required. 
+3. Update the dataset file paths in `task_tracker/config/models.py` to point to your created files.
 
 ### Option 2: Constructing Your Own Dataset
 
