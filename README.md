@@ -41,7 +41,7 @@ TaskTracker enables more secure use of LLMs in retrieval-augmented applications 
 ----
 
 ## Request access to LLM activations
-To request access to the activation data we generated for simulating task drift, please fill out this [form](https://forms.microsoft.com/r/wXBfXQpuR2) and we will respond with a time-restricted download link.  
+To request access to the activation data we generated for simulating/evaluating task drift, please fill out this [form](https://forms.microsoft.com/r/wXBfXQpuR2) and we will respond with a time-restricted download link (coming soon, we will send download links as soon as they are available).  
 
 ## Environment Setup 
 1. Create and activate the conda environment:
@@ -62,7 +62,7 @@ pip install -e .
 
 ## Dataset Construction
 
-We provide pre-sampled dataset examples for training and evaluation. To access them, please complete this [form](https://forms.microsoft.com/r/wXBfXQpuR2).
+We provide pre-sampled dataset examples for training and evaluation (see option 1 for regenerating our exact data which you probably may need to do if you are using our precomputed activations). 
 
 ### Option 1: Using Pre-sampled Dataset
 
