@@ -14,7 +14,7 @@ from task_tracker.utils.activations import (
 # Update paths in task_tracker.config.models of cache_dir (HF cache dir),
 # activation_parent_dir (the output of activations), and text_dataset_parent_dir (dir of dataset text files)
 
-model_name: str = "mistral"
+model_name: str = "phi3"
 with_priming: bool = True
 
 
@@ -51,7 +51,7 @@ def main():
             if data_type == "train":
                 directory_name = "training"
                 process_texts_in_batches(
-                    dataset_subset=subset[model.start_idx :]
+                    dataset_subset=subset[model.start_idx:], 
                     model=model,
                     data_type=data_type,
                     sub_dir_name=directory_name,
@@ -61,7 +61,7 @@ def main():
                 directory_name = "validation" if "val" in data_type else "test"
                 subset_type = "clean" if "clean" in data_type else "poisoned"
                 process_texts_in_batches_pairs(
-                    dataset_subset=subset[model.start_idx :]
+                    dataset_subset=subset[model.start_idx:], 
                     model=model,
                     data_type=subset_type,
                     sub_dir_name=directory_name,
