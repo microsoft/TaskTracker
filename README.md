@@ -23,7 +23,7 @@ The repo includes:
 TaskTracker enables more secure use of LLMs in retrieval-augmented applications by catching unwanted deviations from user instructions. It also opens up new directions for LLM interpretability and control.
 
 ## Table of Content 
-- [Request Access to Data](#request-data)
+- [Request Access to Activations Data](#request-data)
 - [Environment Setup](#env-setup)
 - [Dataset construction](#dataset-construction)
 - [Activation Generation](#activation-generation)
@@ -40,7 +40,7 @@ TaskTracker enables more secure use of LLMs in retrieval-augmented applications 
 - [Citation](#citation)
 ----
 
-## Request access to LLM activations and training data
+## Request access to LLM activations
 To request access to the activation data we generated for simulating task drift, please fill out this [form](https://forms.microsoft.com/r/wXBfXQpuR2) and we will respond with a time-restricted download link.  
 
 ## Environment Setup 
@@ -62,13 +62,11 @@ pip install -e .
 
 ## Dataset Construction
 
-
-
 We provide pre-sampled dataset examples for training and evaluation. To access them, please complete this [form](https://forms.microsoft.com/r/wXBfXQpuR2).
 
 ### Option 1: Using Pre-sampled Dataset
 
-1- We provide scripts to regenerate our dataset exactly (which you can verify with prompt hashes hashes)
+1- We provide scripts to regenerate our dataset exactly (which you can verify with prompt hashes values)
 2- Please run the notebooks in `task_tracker/dataset_creation/recreate_dataset` which will automatically download the relevant resources and build the dataset. No change is required. 
 3. Update the dataset file paths in `task_tracker/config/models.py` to point to your created files.
 
