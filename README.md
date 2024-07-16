@@ -123,7 +123,8 @@ After generating or downloading the dataset:
 
 ## Activation Generation
 
-We provide pre-computed activations for immediate use. To access them, please complete this [form](https://forms.microsoft.com/r/wXBfXQpuR2).
+- We provide pre-computed activations for immediate use. To access them, please complete this [form](https://forms.microsoft.com/r/wXBfXQpuR2).
+- Note: coming soon. We will reply with links to download once they are available. 
 
 ### Option 1: Using Pre-computed Activations
 
