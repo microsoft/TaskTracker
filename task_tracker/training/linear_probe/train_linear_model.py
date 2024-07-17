@@ -7,7 +7,7 @@ from pprint import pprint
 from sklearn.linear_model import LogisticRegression
 import pickle 
 
-MODEL = "llama3_70b"
+MODEL = "phi3"
 OUTPUT_DIR = MODEL 
 os.makedirs(OUTPUT_DIR,exist_ok=True)
 
@@ -16,7 +16,7 @@ from task_tracker.training.dataset import ActivationsDatasetDynamic, Activations
 from task_tracker.training.helpers.data import load_file_paths
 from task_tracker.training.utils.constants import CONSTANTS_ALL_MODELS, OOD_POISONED_FILE
 
-MODEL = 'mistral'
+
 
 #Which layers would be used for training probes 
 LAYERS_PER_MODEL = {

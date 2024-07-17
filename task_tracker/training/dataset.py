@@ -216,9 +216,8 @@ class ActivationsDatasetDynamicReturnText(Dataset):
         """
         
         dataset_text = []
-        dataset_files = {'train': json.load(open(os.path.join(self.data_dir,'train_subset.json'))),
-                        'val': json.load(open(os.path.join(self.data_dir,'val_subset.json'))),
-                        'test': json.load(open(os.path.join(self.data_dir,'test_subset.json'))) }
+        dataset_files = {'train': json.load(open(os.path.join(self.data_dir,'train_subset.json')))
+                        }
         for file in self.dataset_files:
             subset_name = file.split('_')[0]
             start_index = int(file.split('_')[3])

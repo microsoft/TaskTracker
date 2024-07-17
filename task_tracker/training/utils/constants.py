@@ -11,9 +11,9 @@ from task_tracker.config.models import activation_parent_dir
 
 
 # Directory contain text files of activations lists
-DATA_LISTS = "/share/projects/TaskTracker/data"
+DATA_LISTS = "/home/saabdelnabi/TaskTracker/task_tracker/data"
 # The output directory to store output models per epoch and the best running model
-MODEL_OUTPUT_DIR =  '/share/projects/jailbreak-activations/output_dir'
+MODEL_OUTPUT_DIR =  '/home/saabdelnabi/TaskTracker/task_tracker/output_dir'
 # Directory of the text of sampled training examples 
 TRAINING_TEXT_DIR = text_dataset_parent_dir
 # OOD poisoned file (validation)
@@ -96,7 +96,6 @@ TEST_POISONED_FILES_PER_MODEL = {
     'mixtral': [file.strip() for file in open(os.path.join(DATA_LISTS, 'test_poisoned_files_mixtral.txt'))],
     'llama3_8b' : [file.strip() for file in open(os.path.join(DATA_LISTS, 'test_poisoned_files_llama3_8b.txt'))],
     'phi3' : [file.strip() for file in open(os.path.join(DATA_LISTS, 'test_poisoned_files_phi3.txt'))],
-    'phi3' : [file.strip() for file in open(os.path.join(DATA_LISTS,  'test_poisoned_files_phi3.txt'))],
     'mistral_no_priming' : [file.strip() for file in open(os.path.join(DATA_LISTS, 'no_priming', 'test_poisoned_files_mistral.txt'))],
     'llama3_70b' : [file.strip() for file in open(os.path.join(DATA_LISTS, 'test_poisoned_files_llama3_70b.txt'))]
 }
