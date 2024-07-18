@@ -4,7 +4,8 @@ TaskTracker is a novel approach to detect task drift in large language models (L
 <p align="center">
 <img src="https://github.com/microsoft/TaskTracker/blob/main/assets/teaser.png" width="700">
 </p>
- Key features:
+ 
+ **Key features:**
 
 * Detects when an LLM deviates from a user's original instructions due to malicious prompts injected into external data sources
 * Works across multiple state-of-the-art LLMs including Mistral 7B, Llama-3 8B,Llama-3 70B, Mixtral 8x7B, and Phi-3 3.8B
@@ -12,7 +13,7 @@ TaskTracker is a novel approach to detect task drift in large language models (L
 * Does not require model fine-tuning or output generation, maximizing deployability and efficiency
 * Generalizes well to detect various types of task drift without being trained on specific attacks
 
-The repo includes:
+**The repo includes:**
 
 * Steps to recreate our exact large-scale dataset (500K+ examples), and generate a new one, for training and evaluating task drift detection
 * Form to request access to the pre-computed activations
@@ -66,8 +67,8 @@ We provide pre-sampled dataset examples for training and evaluation (see option 
 
 ### Option 1: Using Pre-sampled Dataset
 
-1- We provide scripts to regenerate our dataset exactly (which you can verify with prompt hashes values)
-2- Please run the notebooks in `task_tracker/dataset_creation/recreate_dataset` which will automatically download the relevant resources and build the dataset. No change is required. 
+1. We provide scripts to regenerate our dataset exactly (which you can verify with prompt hashes values).
+2. Please run the notebooks in `task_tracker/dataset_creation/recreate_dataset` which will automatically download the relevant resources and build the dataset. No change is required. 
 3. Update the dataset file paths in `task_tracker/config/models.py` to point to your created files.
 
 ### Option 2: Constructing Your Own Dataset
