@@ -5,8 +5,8 @@ from task_tracker.config.models import text_dataset_parent_dir
 
 
 #Constants for parent dir of experiments outputs 
-linear_probe_out_parent_dir = "/share/projects/jailbreak-activations/linear_probing/training"
-triplet_probe_out_parent_dir = "/share/projects/jailbreak-activations/output_dir"
+linear_probe_out_parent_dir = "/home/saabdelnabi/TaskTracker/trained_linear_probes/"
+triplet_probe_out_parent_dir = "/home/saabdelnabi/TaskTracker/trained_triplet_probes"
 
 MODELS_RESPONSE_OUT_FILENAME_PER_MODEL = {
     
@@ -81,13 +81,13 @@ LINEAR_PROBES_PATHS_PER_MODEL = {
 TRIPLET_PROBES_PATHS_PER_MODEL = {
     'mistral' : {'path': triplet_probe_out_parent_dir + '/mistral_best', 
                  'num_layers': (17,31), 
-                 'saved_embs_clean': 'clean_embeddings_20240429-133151.json' ,
-                 'saved_embs_poisoned':  'poisoned_embeddings_20240429-134637.json'},
+                 'saved_embs_clean': 'clean_embeddings_20240718-141006.json',
+                 'saved_embs_poisoned':  'poisoned_embeddings_20240718-141438.json'},
     
     'mixtral' : {'path': triplet_probe_out_parent_dir + '/mixtral_best', 
                  'num_layers': (0,5),
-                 'saved_embs_clean': 'clean_embeddings_20240512-184429.json' ,
-                 'saved_embs_poisoned':  'poisoned_embeddings_20240512-184534.json'},
+                 'saved_embs_clean': 'clean_embeddings_20240718-155635.json' ,
+                 'saved_embs_poisoned':  'poisoned_embeddings_20240718-155849.json'},
     
     'llama3_70b' : {'path': triplet_probe_out_parent_dir + '/llama3_70b_best', 
                     'num_layers': (1,15),
@@ -97,5 +97,10 @@ TRIPLET_PROBES_PATHS_PER_MODEL = {
     'llama3_8b': {'path': triplet_probe_out_parent_dir + '/llama3_8b_best', 
                   'num_layers': (0,5),
                   'saved_embs_clean': 'clean_embeddings_20240512-205233.json',
-                  'saved_embs_poisoned': 'poisoned_embeddings_20240512-205937.json'}
+                  'saved_embs_poisoned': 'poisoned_embeddings_20240512-205937.json'},
+    
+    'phi3': {'path': triplet_probe_out_parent_dir + '/phi3_best/',
+             'num_layers': (0,5),
+             'saved_embs_clean': 'clean_embeddings_20240718-123946.json',
+             'saved_embs_poisoned': 'poisoned_embeddings_20240718-124255.json'}
 }
