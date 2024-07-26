@@ -72,7 +72,7 @@ CONSTANTS_ALL_MODELS = {
 TEST_ACTIVATIONS_DIR_PER_MODEL = {
     'mistral': activation_parent_dir + '/mistral_7B/test',
     'mixtral': activation_parent_dir + '/mixtral_8x7B_instruct_float16/test',
-    'llama3_8b': activation_parent_dir + '/disk1/activations/llama3_8b/test/',
+    'llama3_8b': activation_parent_dir + '/llama3_8b/test/',
     'phi3': activation_parent_dir + '/phi3/test',
     'mistral_no_priming': activation_parent_dir + '/mistral_no_priming/test',
     'llama3_70b': activation_parent_dir + '/llama_3_70B_Instruct/test'

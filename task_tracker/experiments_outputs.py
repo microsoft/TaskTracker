@@ -10,9 +10,9 @@ triplet_probe_out_parent_dir = "/home/saabdelnabi/TaskTracker/trained_triplet_pr
 
 MODELS_RESPONSE_OUT_FILENAME_PER_MODEL = {
     
-    'mistral': text_dataset_parent_dir + '/mistral_responses/dataset_out_poisoned_test_mistral_response.json.json',
-    'mixtral': text_dataset_parent_dir + '/mixtral_responses/dataset_out_poisoned_test_mixtral_response.json.json',
-    'llama3_8b' : text_dataset_parent_dir + '/llama3_8b_responses/dataset_out_poisoned_test_llama3_8b_response.json.json'
+    'mistral': text_dataset_parent_dir + '/mistral_responses/dataset_out_poisoned_test_mistral_response.json',
+    'mixtral': text_dataset_parent_dir + '/mixtral_responses/dataset_out_poisoned_test_mixtral_response.json',
+    'llama3_8b' : text_dataset_parent_dir + '/llama3_8b_responses/dataset_out_poisoned_test_llama3_8b_response.json'
 }
 
 VERIFIER_RESPONSE_OUT_FILENAME_PER_MODEL = {
@@ -86,21 +86,21 @@ TRIPLET_PROBES_PATHS_PER_MODEL = {
     
     'mixtral' : {'path': triplet_probe_out_parent_dir + '/mixtral_best', 
                  'num_layers': (0,5),
-                 'saved_embs_clean': 'clean_embeddings_20240718-155635.json' ,
-                 'saved_embs_poisoned':  'poisoned_embeddings_20240718-155849.json'},
+                 'saved_embs_clean': 'clean_embeddings_20240725-161155.json' ,
+                 'saved_embs_poisoned':  'poisoned_embeddings_20240725-161339.json'},
     
     'llama3_70b' : {'path': triplet_probe_out_parent_dir + '/llama3_70b_best', 
                     'num_layers': (1,15),
-                    'saved_embs_clean': 'clean_embeddings_20240614-160133.json',
-                    'saved_embs_poisoned':  'poisoned_embeddings_20240614-160957.json'},
+                    'saved_embs_clean': 'clean_embeddings_20240725-162801.json',
+                    'saved_embs_poisoned':  'poisoned_embeddings_20240725-163550.json'},
     
     'llama3_8b': {'path': triplet_probe_out_parent_dir + '/llama3_8b_best', 
                   'num_layers': (0,5),
-                  'saved_embs_clean': 'clean_embeddings_20240512-205233.json',
-                  'saved_embs_poisoned': 'poisoned_embeddings_20240512-205937.json'},
+                  'saved_embs_clean': 'clean_embeddings_20240725-155626.json',
+                  'saved_embs_poisoned': 'poisoned_embeddings_20240725-160631.json'},
     
     'phi3': {'path': triplet_probe_out_parent_dir + '/phi3_best/',
              'num_layers': (0,5),
-             'saved_embs_clean': 'clean_embeddings_20240718-123946.json',
-             'saved_embs_poisoned': 'poisoned_embeddings_20240718-124255.json'}
+             'saved_embs_clean': 'clean_embeddings_20240725-154429.json',
+             'saved_embs_poisoned': 'poisoned_embeddings_20240725-154632.json'}
 }

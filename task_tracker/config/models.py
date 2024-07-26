@@ -9,10 +9,10 @@ os.environ["TRANSFORMERS_CACHE"] = cache_dir
 os.environ["HF_HOME"] = cache_dir
 
 # Directory where model activation data will be stored
-activation_parent_dir = "/disk1/activations"
+activation_parent_dir =  '/disk3/activations/'
 
 # Directory where the dataset text files are stored
-text_dataset_parent_dir = "/share/projects/jailbreak-activations/dataset_sampling/dataset_sampled"
+text_dataset_parent_dir = "/home/saabdelnabi/TaskTracker/task_tracker/dataset_creation/dataset_sampled"
 
 # Paths to dataset files
 data = {
@@ -25,7 +25,7 @@ data = {
 
 # Initialize models with specific configurations
 llama_3_70B = Model(
-    name="meta-llama/Meta-Llama-3-70B",
+    name="meta-llama/Meta-Llama-3-70B-Instruct",
     output_dir=os.path.join(activation_parent_dir, "llama3_70b"),
     data=data,
     subset="train",
@@ -33,7 +33,7 @@ llama_3_70B = Model(
 )
 
 llama_3_8B = Model(
-    name="meta-llama/Meta-Llama-3-8B",
+    name="meta-llama/Meta-Llama-3-8B-Instruct",
     output_dir=os.path.join(activation_parent_dir, "llama3_8b"),
     data=data,
     subset="train",
