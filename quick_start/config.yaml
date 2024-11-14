@@ -1,0 +1,6 @@
+task_tracker_threshold: 0.9
+task_tracker_layer: 31
+task_tracker_model: '../trained_linear_probes/tasktracker_phi3_medium_v2_AugmentedData/{}/model.pickle'
+open_llm_name: microsoft/Phi-3-medium-128k-instruct
+hf_dir: /disk1/models
+data_path: mock_data.json
