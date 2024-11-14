@@ -15,6 +15,7 @@ TaskTracker is a novel approach to detect task drift in large language models (L
 
 **The repo includes:**
 
+* New!! Easier way to run the trained probes on new datasets/examples.
 * Steps to recreate our exact large-scale dataset (500K+ examples), and generate a new one, for training and evaluating task drift detection
 * Form to request access to the pre-computed activations
 * Code to extract and analyze LLM activations
@@ -26,6 +27,7 @@ TaskTracker enables more secure use of LLMs in retrieval-augmented applications 
 ## Table of Content 
 - [Request Access to Activations Data](#request-data)
 - [Environment Setup](#env-setup)
+- [Run on your data [NEW!]](#new-data)
 - [Dataset construction](#dataset-construction)
 - [Activation Generation](#activation-generation)
     - Supported models at the moment are: Phi-3 3.8B, Mistral 7B, Llama-3 8B, Mixtral 8x7B, Llama-3 70B
@@ -58,6 +60,25 @@ conda activate tasktracker
 cd TaskTracker
 pip install -e .
 ```
+## New data
+
+1- Check `quick_start` for a simple way to run on new data 
+
+2- Edit `quick_start/config.yaml` for configurations of classifier path, which LLM, parameters of layers and thresholds, etc. 
+
+3- Check the structure of data in `quick_start/mock_data.json`. You can prepare your data as 
+
+```
+[
+ {
+  "user_prompt": "primary task",
+  "text": "paragraph, can be clean or poisoned",
+  "label": 1 (poisoned), 0 (clean)
+ }
+]
+```
+
+4- run `quick_start/main_quick_test.py`. According to which LLM/Task Tracker you are using, change `torch_type` when loading the LLM (check `TaskTracker/task_tracker/config/models.py` for the precision we used for each LLM).
 
 ---
 

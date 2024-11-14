@@ -1,0 +1,1 @@
+{"exp_name": "logistic_regression_phi3_medium_31", "activations_clean_xpia": "/disk3/activations/xpia_train/phi3_medium/training/clean", "activations_poisoned_xpia": "/disk3/activations/xpia_train/phi3_medium/training/poisoned", "TaskTracker_activations": "/disk3/activations/phi3_medium_128k/training/", "num_layers": 31}
