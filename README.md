@@ -48,22 +48,27 @@ TaskTracker enables more secure use of LLMs in retrieval-augmented applications 
 To request access to the activation data we generated for simulating/evaluating task drift, please fill out this [form](https://forms.microsoft.com/r/wXBfXQpuR2) and we will respond with a time-restricted download link (coming soon, we will send download links as soon as they are available).  
 
 ### Download Data
+1. Install [azcopy](https://formulae.brew.sh/formula/azcopy). For Macbook, run `brew install azcopy`.
+2. Run the following command:
+     -  Replace {MODEL_NAME} and {DATA_DISTRIBUTION} with your target values. The available target values are listed below and must be transcribed exactly.
+     -  Replace {SAS_TOKEN} with the provided SAS key.
+     -  Update <LOCAL_PATH> with the local location you want to download the data.
+```bash
+azcopy copy 'https://tasktrackeropensource.blob.core.windows.net/activations/{MODEL_NAME}/{DATA_DISTRIBUTION}?{SAS_TOKEN}' <LOCAL_PATH> --recursive
+```
 
-1.  Add the user-delegated SAS token you were provided after requesting access as a local environment variable called `SAS_TOKEN`.
-1.  Update the activation path to specify the model and data partition you want to download. This can be one of the following values.
+### Target Values
+#### Models
+* phi__3__3.8
+* mistral__7B
+* mistral__7B__no_priming
+* llama__3__8B
+* llama__3__70B
 
-**Models**
-* Phi3 3.8B
-* Mistral 7B
-* Mistral 7B (no priming prompt around injected task)
-* Llama3 8B
-* Llama3 70B
-
-**Test Partitions**
-* Training
-* Validation
-* Test
-
+#### Data Distributions
+* training
+* validation
+* test
 ## Environment Setup 
 1. Create and activate the conda environment:
 
