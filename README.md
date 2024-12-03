@@ -26,6 +26,7 @@ TaskTracker enables more secure use of LLMs in retrieval-augmented applications 
 
 ## Table of Content 
 - [Request Access to Activations Data](#request-data)
+   - [Download Data](#download-data) 
 - [Environment Setup](#env-setup)
 - [Run on your data [NEW!]](#new-data)
 - [Dataset construction](#dataset-construction)
@@ -46,19 +47,19 @@ TaskTracker enables more secure use of LLMs in retrieval-augmented applications 
 ## Request access to LLM activations
 To request access to the activation data we generated for simulating/evaluating task drift, please fill out this [form](https://forms.microsoft.com/r/wXBfXQpuR2) and we will respond with a time-restricted download link (coming soon, we will send download links as soon as they are available).  
 
-## Download Data
+### Download Data
 
-* Add the user-delegrated SAS token you were provided after requesting access as a local environment variable called `SAS_TOKEN`.
-* Update the activation path to specify the model and data partition you want to download. This can be one of the following values.
+1.  Add the user-delegrated SAS token you were provided after requesting access as a local environment variable called `SAS_TOKEN`.
+1.  Update the activation path to specify the model and data partition you want to download. This can be one of the following values.
 
-**Models**:
+**Models**
 * Phi3 3.8B
 * Mistral 7B
 * Mistral 7B (no priming prompt around injected task)
 * Llama3 8B
 * Llama3 70B
 
-**Test Partitions**:
+**Test Partitions**
 * Training
 * Validation
 * Test
