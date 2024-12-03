@@ -15,7 +15,7 @@ TaskTracker is a novel approach to detect task drift in large language models (L
 
 **The repo includes:**
 
-* New!! Easier way to run the trained probes on new datasets/examples.
+* A script to run the trained probes on new datasets/examples.
 * Steps to recreate our exact large-scale dataset (500K+ examples), and generate a new one, for training and evaluating task drift detection
 * Form to request access to the pre-computed activations
 * Code to extract and analyze LLM activations
