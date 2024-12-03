@@ -49,7 +49,7 @@ To request access to the activation data we generated for simulating/evaluating 
 
 ### Download Data
 
-1.  Add the user-delegrated SAS token you were provided after requesting access as a local environment variable called `SAS_TOKEN`.
+1.  Add the user-delegated SAS token you were provided after requesting access as a local environment variable called `SAS_TOKEN`.
 1.  Update the activation path to specify the model and data partition you want to download. This can be one of the following values.
 
 **Models**
