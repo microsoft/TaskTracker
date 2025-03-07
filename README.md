@@ -1,5 +1,5 @@
-# TaskTracker (or, *Are you still on track?!*)
-TaskTracker is a novel approach to detect task drift in large language models (LLMs) by analyzing their internal activations. It is based on the research described in this paper [Are you still on track!? Catching LLM Task Drift with Activations](https://arxiv.org/abs/2406.00799). 
+# TaskTracker (or, *Get my drift?*)
+TaskTracker is a novel approach to detect task drift in large language models (LLMs) by analyzing their internal activations. It is based on the research described in this SaTML'25 paper [Get my drift? Catching LLM Task Drift with Activation Deltas](https://arxiv.org/abs/2406.00799). 
 
 <p align="center">
 <img src="https://github.com/microsoft/TaskTracker/blob/main/assets/teaser.png" width="700">
@@ -469,13 +469,10 @@ Note: Adjust model names and file paths as necessary for your specific setup and
 If you find our paper, dataset, or this repo helpful, please cite our paper:
 
 ``` 
-@misc{abdelnabi2024trackcatchingllmtask,
-      title={Are you still on track!? Catching LLM Task Drift with Activations}, 
+@inproceedings{abdelnabi2025getmydrift,
+      title={Get my drift? Catching LLM Task Drift with Activation Deltas}, 
       author={Sahar Abdelnabi and Aideen Fay and Giovanni Cherubin and Ahmed Salem and Mario Fritz and Andrew Paverd},
-      year={2024},
-      eprint={2406.00799},
-      archivePrefix={arXiv},
-      primaryClass={cs.CR},
-      url={https://arxiv.org/abs/2406.00799}, 
+      year={2025},
+      booktitle={SaTML (To Appear)}
 }
 ```
