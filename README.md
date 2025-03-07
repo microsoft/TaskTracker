@@ -69,6 +69,33 @@ azcopy copy 'https://tasktrackeropensource.blob.core.windows.net/activations/{MO
 * training
 * validation
 * test
+
+### Loading the Data 
+
+- The shape of the activation tensor for training subset is the following: `[3, BATCH, LAYERS, DIM]`:
+ - Dim 0 is stored as: Primary task, Clean, and Poisoned
+ - Training data was constructed using the same text examples as pairs of clean vs poisoned ones 
+   
+- The shape of the activation tensor for validation subset is the following: `[2, BATCH, LAYERS, DIM]`:
+  - Dim 0 is stored as: Primary task, the whole text.
+  - Whether it is clean or poisoned depends on the activation files (which is included in the file names)
+    
+  ```python
+  
+  import torch
+  
+  # Load the activation data for validation/test 
+  clean_activations = torch.load('activations/activations_0.pt')
+  poisoned_activations = torch.load('activations/activations_1.pt')
+  # Shape: (2, 1000, 32, 4096). For training files, this would be (3, 1000, 32, 4096)
+  
+  
+  # Subtract the first dimension of the activations (to remove the instruction and only compare data blocks)
+  clean_activations = clean_activations[1] - clean_activations[0]
+  poisoned_activations = poisoned_activations[1] - poisoned_activations[0]
+  # Shape: (1000, 32, 4096)
+  ```
+  
 ## Environment Setup 
 1. Create and activate the conda environment:
 
