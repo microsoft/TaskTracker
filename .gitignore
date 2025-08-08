@@ -2,3 +2,4 @@ _activations_old/*
 *.ipynb
 *.pyc
 *.egg-info
+.specstory/

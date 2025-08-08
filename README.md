@@ -83,7 +83,7 @@ azcopy copy 'https://tasktrackeropensource.blob.core.windows.net/activations/{MO
   ```python
   
   import torch
-  
+
   # Load the activation data for validation/test 
   clean_activations = torch.load('activations/activations_0.pt')
   poisoned_activations = torch.load('activations/activations_1.pt')
@@ -347,7 +347,9 @@ Use `task_tracker/evaluation/visualizations/tsne_raw_activations.ipynb` to visua
 
 ```python
 from task_tracker.training.dataset import ActivationsDatasetDynamicPrimaryText
-from task_tracker.training.utils.constants import TEST_ACTIVATIONS_DIR_PER_MODEL, TEST_CLEAN_FILES_PER_MODEL, TEST_POISONED_FILES_PER_MODEL
+from task_tracker.training.utils.constants import (
+    TEST_ACTIVATIONS_DIR_PER_MODEL, TEST_CLEAN_FILES_PER_MODEL,
+    TEST_POISONED_FILES_PER_MODEL)
 
 MODEL = 'mistral'
 BATCH_SIZE = 256
@@ -366,8 +368,9 @@ python task_tracker/evaluation/verifier/get_model_responses.py
 
 2. Configure in the script:
 ```python
-from task_tracker.experiments_outputs import MODELS_RESPONSE_OUT_FILENAME_PER_MODEL
-from task_tracker.config.models import data, models, cache_dir
+from task_tracker.config.models import cache_dir, data, models
+from task_tracker.experiments_outputs import \
+    MODELS_RESPONSE_OUT_FILENAME_PER_MODEL
 
 POISONED_TEST_DATASET_FILENAME = data['test_poisoned'] 
 CLEAN_TEST_DATASET_FILENAME = data['test_clean']
@@ -384,8 +387,10 @@ python task_tracker/evaluation/verifier/gpt4_judge_parallel_calls.py
 Note: This script uses parallel API calls. Be mindful of costs when processing large datasets.
 
 ```python
-from task_tracker.experiments_outputs import MODELS_RESPONSE_OUT_FILENAME_PER_MODEL, VERIFIER_RESPONSE_OUT_FILENAME_PER_MODEL
 from task_tracker.config.models import data
+from task_tracker.experiments_outputs import (
+    MODELS_RESPONSE_OUT_FILENAME_PER_MODEL,
+    VERIFIER_RESPONSE_OUT_FILENAME_PER_MODEL)
 
 MODEL = 'llama3_8b'
 MAX_THREADS = 60
@@ -399,9 +404,11 @@ AZURE_OPENAI_ENDPOINT = ''
 #### Evaluating Linear Probes
 Use `task_tracker/evaluation/linear_probe/evaluate_linear_models.ipynb`:
 ```python
-from task_tracker.training.utils.constants import TEST_ACTIVATIONS_DIR_PER_MODEL, TEST_CLEAN_FILES_PER_MODEL, TEST_POISONED_FILES_PER_MODEL
-from task_tracker.training.dataset import ActivationsDatasetDynamicPrimaryText
 from task_tracker.experiments_outputs import LINEAR_PROBES_PATHS_PER_MODEL
+from task_tracker.training.dataset import ActivationsDatasetDynamicPrimaryText
+from task_tracker.training.utils.constants import (
+    TEST_ACTIVATIONS_DIR_PER_MODEL, TEST_CLEAN_FILES_PER_MODEL,
+    TEST_POISONED_FILES_PER_MODEL)
 
 FILES = 'test'
 MODEL = 'llama3_70b'
@@ -415,8 +422,10 @@ MODEL = 'llama3_70b'
 Use `task_tracker/evaluation/triplet_probe/evaluate_triplet_models_test_data.ipynb`:
 
 ```python
-from task_tracker.training.utils.constants import TEST_ACTIVATIONS_DIR_PER_MODEL, TEST_CLEAN_FILES_PER_MODEL, TEST_POISONED_FILES_PER_MODEL
 from task_tracker.experiments_outputs import TRIPLET_PROBES_PATHS_PER_MODEL
+from task_tracker.training.utils.constants import (
+    TEST_ACTIVATIONS_DIR_PER_MODEL, TEST_CLEAN_FILES_PER_MODEL,
+    TEST_POISONED_FILES_PER_MODEL)
 
 MODEL = 'llama3_70b'
 ```
@@ -440,7 +449,8 @@ Use `task_tracker/evaluation/triplet_probe/distances_per_conditions.ipynb`:
 
 ```python
 from task_tracker.config.models import data
-from task_tracker.experiments_outputs import TRIPLET_PROBES_PATHS_PER_MODEL, VERIFIER_RESPONSE_OUT_FILENAME_PER_MODEL
+from task_tracker.experiments_outputs import (
+    TRIPLET_PROBES_PATHS_PER_MODEL, VERIFIER_RESPONSE_OUT_FILENAME_PER_MODEL)
 
 POISONED_TEST_DATASET_FILENAME = data['test_poisoned'] 
 CLEAN_TEST_DATASET_FILENAME = data['test_clean']
@@ -451,7 +461,7 @@ CLEAN_TEST_DATASET_FILENAME = data['test_clean']
 Use `task_tracker/evaluation/triplet_probe/temporal_distances_per_tokens.ipynb`:
 
 ```python
-from task_tracker.config.models import data, models, cache_dir
+from task_tracker.config.models import cache_dir, data, models
 from task_tracker.experiments_outputs import TRIPLET_PROBES_PATHS_PER_MODEL
 
 os.environ["TRANSFORMERS_CACHE"] = cache_dir

@@ -1,6 +1,7 @@
-from transformers import AutoModelForCausalLM, AutoTokenizer, AutoConfig
 import os
+
 import torch
+from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 
 
 def load_model(model_name: str, cache_dir: str, torch_dtype: torch.dtype):

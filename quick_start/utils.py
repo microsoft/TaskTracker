@@ -1,18 +1,20 @@
-
-from typing import Dict
-import yaml
 import logging
-import torch
+import os
 import pickle
-import os 
-from transformers import AutoTokenizer, pipeline, AutoModelForCausalLM, AutoConfig
+from typing import Dict
 
-# Task Tracker prompts 
-SEP_PROMPT = "Consider the following request that you must answer based on the given text: "
+import torch
+import yaml
+from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer, pipeline
+
+# Task Tracker prompts
+SEP_PROMPT = (
+    "Consider the following request that you must answer based on the given text: "
+)
 
 GLOBAL_USER_PROMPT = "Summarize the following text"
 
-#Anything you want to add here as part of a meta-prompt
+# Anything you want to add here as part of a meta-prompt
 ADDITIONAL_PROMPT = ""
 
 
@@ -38,7 +40,7 @@ def setup_hf_llm(model_name, cache_dir, torch_type=torch.bfloat16):
     tokenizer.pad_token = tokenizer.eos_token
 
     return model, tokenizer
-    
+
 
 def load_config(config_path: str = "config.yaml") -> Dict:
     try:
@@ -68,8 +70,11 @@ def load_task_tracker(model_path: str):
         logging.error(f"Error unpickling model from file: {model_path}", exc_info=True)
         raise
     except Exception as e:
-        logging.error(f"Unexpected error loading task tracker model: {e}", exc_info=True)
+        logging.error(
+            f"Unexpected error loading task tracker model: {e}", exc_info=True
+        )
         raise
+
 
 def get_last_token_activations(text, model_name, layer, model, tokenizer):
     if "mistral" in model_name.lower() or "phi" in model_name.lower():
@@ -110,7 +115,12 @@ def format_prompts(documents, specific_user_prompt=""):
     eliciting_instructions = """ but first before you answer, please complete the following sentence by briefly writing each request(s) you received and you are going to execute next:  
         "All requests that I am going to execute now are:" """
 
-    primary = "here are your main requests: <MAIN> " + orig_task + " </MAIN>" + eliciting_instructions
+    primary = (
+        "here are your main requests: <MAIN> "
+        + orig_task
+        + " </MAIN>"
+        + eliciting_instructions
+    )
     primary_text = (
         "here are your main requests: <MAIN> "
         + orig_task
@@ -123,12 +133,22 @@ def format_prompts(documents, specific_user_prompt=""):
 
 
 def task_tracker_main(
-    documents, llm, llm_name, tokenizer, task_tracker_model, layer, specific_user_prompt=""
+    documents,
+    llm,
+    llm_name,
+    tokenizer,
+    task_tracker_model,
+    layer,
+    specific_user_prompt="",
 ):
 
     primary, primary_text = format_prompts(documents, specific_user_prompt)
-    primary_activations = get_last_token_activations(primary, llm_name, layer, llm, tokenizer)
-    primary_text_activations = get_last_token_activations(primary_text, llm_name, layer, llm, tokenizer)
+    primary_activations = get_last_token_activations(
+        primary, llm_name, layer, llm, tokenizer
+    )
+    primary_text_activations = get_last_token_activations(
+        primary_text, llm_name, layer, llm, tokenizer
+    )
 
     deltas = (primary_text_activations - primary_activations).float().numpy()
 
