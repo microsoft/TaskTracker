@@ -1,12 +1,14 @@
-import torch
 import json
 import logging
-from task_tracker.utils.model import load_model
-from task_tracker.config.models import models, cache_dir
+
+import torch
+
+from task_tracker.config.models import cache_dir, models
 from task_tracker.utils.activations import (
     process_texts_in_batches,
     process_texts_in_batches_pairs,
 )
+from task_tracker.utils.model import load_model
 
 # NOTE: Configuration
 # Update the model name to the model you want to generate activations for (from models in task_tracker.config.models)
@@ -51,7 +53,7 @@ def main():
             if data_type == "train":
                 directory_name = "training"
                 process_texts_in_batches(
-                    dataset_subset=subset[model.start_idx:], 
+                    dataset_subset=subset[model.start_idx :],
                     model=model,
                     data_type=data_type,
                     sub_dir_name=directory_name,
@@ -61,7 +63,7 @@ def main():
                 directory_name = "validation" if "val" in data_type else "test"
                 subset_type = "clean" if "clean" in data_type else "poisoned"
                 process_texts_in_batches_pairs(
-                    dataset_subset=subset[model.start_idx:], 
+                    dataset_subset=subset[model.start_idx :],
                     model=model,
                     data_type=subset_type,
                     sub_dir_name=directory_name,
