@@ -47,7 +47,8 @@ def main():
     # Process data for activations
     for data_type, data in model.data.items():
         try:
-            subset = json.load(open(data, "r"))
+            with open(data, "r") as f:
+                subset = json.load(f)
 
             # Determine directory and subset types based on data type
             if data_type == "train":
